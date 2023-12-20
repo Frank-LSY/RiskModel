@@ -9,8 +9,31 @@ const routes = [
         path: '/',
         redirect: "/riskModel",
         meta: {
-            title: '肺癌风险预测问卷'
+            title: '疾病风险全因素分析'
         }
+    },
+    {
+        path: '/riskModel',
+        component: () => import('@/Structure.vue'),
+        redirect: "/query",
+        name: '主页',
+        meta: {
+            isLogin: false,
+            title: '疾病风险全因素分析',
+            index: 1
+        },
+        children: [
+            {
+                path: '/query',
+                component: () => import('@components/HelloWorld.vue'),
+                name: '检查',
+                meta: {
+                    isLogin: false,
+                    title: '疾病风险全因素分析-查询',
+                    index: 1
+                },
+            },
+        ]
     },
 
 ]
