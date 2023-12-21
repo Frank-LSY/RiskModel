@@ -531,6 +531,7 @@ module.exports = {
         soixante: '60vh',
         soixantecinq: '65vh',
         soixantedix: '70vh',
+        soixantequinze: '75vh',
         quatrevint: '80vh',
         quatrevintdeux: '82vh',
         quatrevintcinq: '85vh',
