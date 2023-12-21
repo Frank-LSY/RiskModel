@@ -1,7 +1,14 @@
 <template>
-  <div
-    class="absolute top-6 left-1/24 w-11/12 h-soixantedixhuit bg-gray-200 bg-opacity-90 rounded-2xl shadow-lg z-50 divide-y-4 divide-double divide-gray-100"
+  <div class="absolute top-6 left-1/24 w-11/12 h-soixantedixhuit  bg-gray-200 z-40">
+    <img
+      src="@assets/img/gehong.jpg"
+      class="absolute bottom-0 left-0 w-full opacity-10 z-40"
+      v-if="store.getters.getChineseStyle"
+    /> 
+    <div
+    class="w-full h-soixantedixhuit rounded-2xl shadow-lg z-50 divide-y-4 divide-double divide-gray-100"
   >
+  <div class=" absolute right-2 top-2 text-xl font-bold cursor-pointer select-none" @click="closeDetail">X</div>
     <!-- 标题 -->
     <div
       class="w-full flex flex-wrap justify-center text-gray-700 font-semibold"
@@ -27,7 +34,7 @@
       class="w-full flex flex-wrap justify-center content-start text-gray-700 font-semibold pt-2"
     >
       <div
-        class="w-5/6 h-cinq bg-gradient-to-r from-emerald-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center"
+        class="w-5/6 h-cinq bg-gradient-to-r from-emerald-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center border-4 border-gray-500"
       >
         <div  class="px-1">低风险</div>
         <div class="px-1">高风险</div>
@@ -45,15 +52,25 @@
     <!-- 选项块 -->
     <div class=""></div>
   </div>
+
+  </div>
+
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, defineEmits } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 
 const router = useRouter();
 const store = useStore();
+
+// 点击关闭
+const emit = defineEmits(['closeDetail'])
+const closeDetail = ()=>{
+  let showDetail=false
+  emit('closeDetail', showDetail)
+}
 
 const severity = ref("");
 const severity_num = ref(0);

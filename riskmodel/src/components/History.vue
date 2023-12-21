@@ -1,25 +1,25 @@
 <template>
   <div class="flex flex-wrap justify-center content-center relative">
     <button
-      class="absolute top-0 left-2 bg-amber-300 px-1 rounded z-50"
+      class="absolute top-0 left-2 bg-amber-300 px-1 rounded z-50 font-semibold"
       @click="goBack"
     >
       返回
     </button>
     <div
-      class="w-5/6 sm:w-2/3 z-40 overflow-auto text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center content-evenly text-center"
+      class="w-5/6 sm:w-2/3 z-30 overflow-auto text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center content-evenly text-center"
     >
       <div class="w-2/3">姓名: 测试</div>
       <div class="w-2/3">性别: 女性</div>
       <div class="w-2/3">年龄: 38</div>
     </div>
-    <div class="h-cinq w-5/6 sm:w-2/3 flex flex-wrap content-center z-50">
+    <div class="h-cinq w-5/6 sm:w-2/3 flex flex-wrap content-center z-30">
       <div class="text-sm md:text-base text-gray-600 font-semibold">
         以下是您基于您的问卷信息得到的疾病风险评估及分析:
       </div>
     </div>
     <div
-      class="w-5/6 sm:w-2/3 z-40 overflow-auto relative h-soixante bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg grid grid-cols-12"
+      class="w-5/6 sm:w-2/3 z-30 overflow-auto relative h-soixante bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg grid grid-cols-12"
     >
       <div
         class="h-full bg-gradient-to-b from-emerald-400 to-rose-500 flex flex-wrap justify-center content-between rounded font-bold text-sm md:text-base text-center text-gray-100"
@@ -66,18 +66,18 @@
         <div
           class="flex flex-wrap justify-evenly text-gray-400 font-semibold text-start"
         >
-          <div class="w-2/3">* 点击以查看具体风险</div>
-          <div class="w-2/3">
+          <div class="w-3/4">* 点击以查看具体风险</div>
+          <div class="w-3/4">
             *
             该报告完全根据您的问卷信息生成，仅指出您的相关疾病风险及因素。<span
-              class="hidden md:inline"
-              >受本问卷所限，本报告不保证列出所有可能升高您疾病风险的因素，也不代表您患报告中未提及的疾病风险较低。</span
+              class="hidden sm:inline"
+              >受本问卷所限，本报告可能无法列出所有可能升高您疾病风险的因素，也不代表您罹患报告中未提及的疾病风险较低。</span
             >
           </div>
         </div>
       </div>
     </div>
-    <disease-risk v-if="diseaseDialog" class="animatecss animatecss-fadeInUp">
+    <disease-risk v-if="diseaseDialog" class="animatecss animatecss-fadeIn" @close-detail="closeDetailDialog">
     </disease-risk>
   </div>
 </template>
@@ -103,6 +103,10 @@ const showDetail = (item) => {
   store.commit("changeCurrentDisease", item);
   diseaseDialog.value = true;
 };
+const closeDetailDialog = (val)=> {
+  store.commit("changeCurrentDisease", {});
+  diseaseDialog.value = val
+}
 
 onMounted(() => {
   if (store.getters.getLogin === false) {
