@@ -532,6 +532,7 @@ module.exports = {
         soixantecinq: '65vh',
         soixantedix: '70vh',
         soixantequinze: '75vh',
+        soixantedixhuit: '78vh',
         quatrevint: '80vh',
         quatrevintdeux: '82vh',
         quatrevintcinq: '85vh',
@@ -1019,6 +1020,6 @@ module.exports = {
       },
     },
     plugins: [
-    //   require('tailwind-animatecss')
+      require('tailwind-animatecss')
     ],
   }

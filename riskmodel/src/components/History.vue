@@ -1,7 +1,13 @@
 <template>
-  <div class="flex flex-wrap justify-center content-center">
+  <div class="flex flex-wrap justify-center content-center relative">
+    <button
+      class="absolute top-0 left-2 bg-amber-300 px-1 rounded z-50"
+      @click="goBack"
+    >
+      返回
+    </button>
     <div
-      class="w-5/6 sm:w-2/3 z-50 overflow-auto relative text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center text-center"
+      class="w-5/6 sm:w-2/3 z-40 overflow-auto text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center content-evenly text-center"
     >
       <div class="w-2/3">姓名: 测试</div>
       <div class="w-2/3">性别: 女性</div>
@@ -13,7 +19,7 @@
       </div>
     </div>
     <div
-      class="w-5/6 sm:w-2/3 z-50 overflow-auto relative h-soixante bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg grid grid-cols-12"
+      class="w-5/6 sm:w-2/3 z-40 overflow-auto relative h-soixante bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg grid grid-cols-12"
     >
       <div
         class="h-full bg-gradient-to-b from-emerald-400 to-rose-500 flex flex-wrap justify-center content-between rounded font-bold text-sm md:text-base text-center text-gray-100"
@@ -34,7 +40,7 @@
                 'background-color': state2Color[item.severity],
               }"
               class="w-1/4 mx-0.5 my-1 px-1 py-1 border-2 border-gray-400 rounded text-sm md:text-base text-gray-100 font-semibold shadow-lg cursor-pointer"
-              @click="console.log(item.name)"
+              @click="showDetail(item)"
             >
               {{ item.name }}
             </div>
@@ -51,7 +57,7 @@
                 'background-color': state2Color[item.severity],
               }"
               class="w-1/4 mx-0.5 my-1 px-1 py-1 border-2 border-gray-400 rounded text-sm md:text-base text-gray-100 font-semibold shadow-lg cursor-pointer"
-              @click="console.log(item.name)"
+              @click="showDetail(item)"
             >
               {{ item.name }}
             </div>
@@ -71,6 +77,8 @@
         </div>
       </div>
     </div>
+    <disease-risk v-if="diseaseDialog" class="animatecss animatecss-fadeInUp">
+    </disease-risk>
   </div>
 </template>
 
@@ -79,12 +87,21 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { infoMessage, warningMessage } from "@/assets/js/common";
+import DiseaseRisk from "./DiseaseRisk.vue";
 
 const router = useRouter();
 const store = useStore();
 
 const goBack = () => {
   router.push("query");
+};
+
+const diseaseDialog = ref(false);
+const showDetail = (item) => {
+  console.log(item.name);
+  console.log(diseaseDialog.value);
+  store.commit("changeCurrentDisease", item);
+  diseaseDialog.value = true;
 };
 
 onMounted(() => {

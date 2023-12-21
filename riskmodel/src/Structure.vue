@@ -2,23 +2,23 @@
   <div class="bg-amber-50 h-screen relative">
     <img
       src="@assets/img/gehong.jpg"
-      class="absolute bottom-0 left-0 w-full opacity-5 z-0"
+      class="absolute bottom-0 left-0 w-full opacity-10 z-0"
       v-if="store.getters.getChineseStyle"
     />
     <div class="w-full h-dix bg-amber-200 relative">
       <img
         src="@assets/img/head-syzwb.png"
-        class="absolute w-2/3 left-1/6 sm:w-1/2 sm:left-1/4 top-4 md:top-0 lg:top-4 xl:top-2"
+        class="absolute w-2/3 left-1/6 sm:w-1/2 sm:left-1/4 top-4 md:top-0 lg:top-4 xl:top-2 opacity-50"
         v-if="store.getters.getChineseStyle"
       />
       <img
         src="@assets/img/huakuang.png"
-        class="absolute h-full w-full"
+        class="absolute h-full w-full opacity-50"
         v-if="store.getters.getChineseStyle"
       />
       <img
         src="@assets/img/bamboo.png"
-        class="absolute bottom-3 md:bottom-4 right-6 md:right-16 h-2/3"
+        class="absolute bottom-3 md:bottom-4 right-6 md:right-16 h-2/3 opacity-70"
         v-if="store.getters.getChineseStyle"
       />
     </div>
