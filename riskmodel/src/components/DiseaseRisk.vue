@@ -105,6 +105,8 @@
       </div>
       <!-- 雷达图 -->
       <Radar></Radar>
+      <!-- 说明 -->
+      <Declare></Declare>
     </div>
   </div>
 </template>
@@ -113,8 +115,10 @@
 import { ref, onMounted, defineEmits } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
-import Radar from "@charts/Radar.vue";
 import { infoMessage, warningMessage } from "@/assets/js/common";
+
+import Radar from "@charts/Radar.vue";
+import Declare from "@disease/Declare.vue"
 
 const router = useRouter();
 const store = useStore();

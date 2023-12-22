@@ -30,6 +30,7 @@ module.exports = {
       .set("@assets", resolve("src/assets"))
       .set("@components", resolve("src/components"))
       .set("@charts", resolve("src/charts"))
+      .set("@disease",resolve("src/disease"))
       .set("@utils", resolve("src/assets/utils"))
       .set("@api", resolve("src/api"))
     config.module

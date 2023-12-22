@@ -45,6 +45,11 @@ const routes = [
             },
         ]
     },
+        {
+        // 一切没的页面导向404
+        path: '/:catchAll(.*)',
+        redirect: '/riskModel',
+    },
 
 ]
 

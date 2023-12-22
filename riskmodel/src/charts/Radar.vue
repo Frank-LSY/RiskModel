@@ -1,5 +1,5 @@
 <template>
-  <div id="radar" class="h-trente w-full"></div>
+  <div id="radar" class="h-trente w-full relative"></div>
 </template>
 
 <script setup>
@@ -12,6 +12,7 @@ var option = {
   color: ["#e5e7eb", "#fde68a", "#fcd34d", "#f59e0b"],
   title: {
     text: "疾病风险因素",
+    left: "8.333333%",
   },
   tooltip: {
     trigger: "item",
@@ -19,21 +20,23 @@ var option = {
   radar: [
     {
       indicator: [
-        { text: "生活习惯因素", max: 100 },
-        { text: "职业暴露因素", max: 100 },
-        { text: "家族遗传因素", max: 100 },
-        { text: "饮食习惯因素", max: 100 },
-        { text: "其他病史因素", max: 100 },
-        { text: "药物使用因素", max: 100 },
+        { text: "生活习惯", max: 100 },
+        { text: "职业暴露", max: 100 },
+        { text: "家族遗传", max: 100 },
+        { text: "饮食习惯", max: 100 },
+        { text: "其他病史", max: 100 },
+        { text: "药物使用", max: 100 },
       ],
       center: ["50%", "50%"],
 
       splitNumber: 4,
+      nameGap: 5,
       shape: "circle",
       axisName: {
         formatter: "{value}",
         color: "#6b7280",
         fontWeight: "bold",
+        fontSize: 16,
       },
       splitArea: {
         areaStyle: {
@@ -64,10 +67,10 @@ var option = {
       },
       data: [
         {
-          value: [100, 60, 20, 20, 15, 15],
+          value: [90, 60, 20, 20, 15, 15],
           name: "风险因素",
           areaStyle: {
-            color: "rgba(251, 113, 133, 0.5)",
+            color: "rgba(161, 161, 133, 0.8)",
           },
         },
       ],
