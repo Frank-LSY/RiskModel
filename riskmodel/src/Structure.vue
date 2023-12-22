@@ -2,7 +2,7 @@
   <div class="bg-amber-50 h-screen relative">
     <img
       src="@assets/img/gehong.jpg"
-      class="absolute bottom-0 left-0 w-full opacity-10 z-0"
+      class="absolute bottom-0 left-0 w-full opacity-20 z-0"
       v-if="store.getters.getChineseStyle"
     />
     <div class="w-full h-dix bg-amber-200 relative">

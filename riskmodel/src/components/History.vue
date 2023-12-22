@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-wrap justify-center content-center relative">
     <button
-      class="absolute top-0 left-2 bg-amber-300 px-1 rounded z-50 font-semibold"
+      class="absolute top-0 left-2 bg-amber-300 px-1 rounded z-50 font-semibold text-gray-700"
       @click="goBack"
     >
       返回
