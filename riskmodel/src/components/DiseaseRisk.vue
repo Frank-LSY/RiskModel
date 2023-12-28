@@ -8,7 +8,7 @@
       v-if="store.getters.getChineseStyle"
     />
     <div
-      class="w-full overflow-auto h-soixantedixhuit rounded-2xl shadow-lg z-50 divide-y-4 divide-double divide-gray-100"
+      class="w-full overflow-auto scroll h-soixantedixhuit rounded-2xl shadow-lg z-50 divide-y-4 divide-double divide-gray-100"
     >
       <div
         class="absolute right-2 top-2 text-xl font-bold cursor-pointer select-none"
@@ -41,7 +41,7 @@
         class="w-full flex flex-wrap justify-center content-start text-gray-700 font-semibold pt-2"
       >
         <div
-          class="w-5/6 h-cinq bg-gradient-to-r from-emerald-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center border-2 border-gray-400"
+          class="w-5/6 h-cinq bg-gradient-to-r from-emerald-400 via-yellow-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center border-2 border-gray-400"
         >
           <div class="px-1">低风险</div>
           <div class="px-1">高风险</div>
@@ -194,7 +194,7 @@ const state2description = () => {
       diseaseRisk = "风险低于平均水平 (风险-)";
       break;
     case "4":
-      diseaseRisk = "风险远约为平均水平 (风险)";
+      diseaseRisk = "风险约为平均水平 (风险)";
       break;
     case "5":
       diseaseRisk = "风险高于平均水平 (风险+)";
@@ -211,11 +211,11 @@ const state2description = () => {
 
 const state2Color = {
   1: "#34d499",
-  2: "#5cb48d",
-  3: "#789f84",
-  4: "#9a847a",
-  5: "#be696f",
-  6: "#d35868",
+  2: "#64d179",
+  3: "#9fcf52",
+  4: "#facc15",
+  5: "#f9ac26",
+  6: "#f67841",
   7: "#f43f5e",
 };
 

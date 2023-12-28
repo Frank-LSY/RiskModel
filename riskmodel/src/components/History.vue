@@ -22,7 +22,7 @@
       class="w-5/6 sm:w-2/3 z-30 overflow-auto relative h-soixante bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg grid grid-cols-12"
     >
       <div
-        class="h-full bg-gradient-to-b from-emerald-400 to-rose-500 flex flex-wrap justify-center content-between rounded font-bold text-sm md:text-base text-center text-gray-100"
+        class="h-full bg-gradient-to-b from-emerald-400 via-yellow-400 to-rose-500 flex flex-wrap justify-center content-between rounded font-bold text-sm md:text-base text-center text-gray-100"
       >
         <div class="w-full">低风险</div>
         <div class="w-full">高风险</div>
@@ -191,11 +191,11 @@ const chronic = [
 
 const state2Color = {
   1: "#34d499",
-  2: "#5cb48d",
-  3: "#789f84",
-  4: "#9a847a",
-  5: "#be696f",
-  6: "#d35868",
+  2: "#64d179",
+  3: "#9fcf52",
+  4: "#facc15",
+  5: "#f9ac26",
+  6: "#f67841",
   7: "#f43f5e",
 };
 </script>

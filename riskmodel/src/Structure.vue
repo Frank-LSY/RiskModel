@@ -16,9 +16,19 @@
         class="absolute h-full w-full opacity-50"
         v-if="store.getters.getChineseStyle"
       />
-      <img
-        src="@assets/img/bamboo.png"
+      <!-- <img
+        src="@assets/img/bamboo1.png"
         class="absolute bottom-3 md:bottom-4 right-6 md:right-16 h-2/3 opacity-70"
+        v-if="store.getters.getChineseStyle"
+      /> -->
+      <img
+        src="@assets/img/bamboo2.png"
+        class="absolute top-1 md:top-2 left-4 md:left-14 lg:left-10 h-4/5 opacity-70"
+        v-if="store.getters.getChineseStyle"
+      />
+      <img
+        src="@assets/img/bamboo2.png"
+        class="absolute bottom-1 md:bottom-2 right-4 md:right-14 lg:right-10 h-4/5 opacity-70 origin-center rotate-180"
         v-if="store.getters.getChineseStyle"
       />
     </div>

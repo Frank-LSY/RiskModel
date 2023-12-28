@@ -1,5 +1,5 @@
 <template>
-  <div id="radar" class="h-trente w-full relative"></div>
+  <div id="radar" class="h-trente w-full lg:w-1/2 relative"></div>
 </template>
 
 <script setup>
@@ -24,7 +24,7 @@ var option = {
         { text: "职业暴露", max: 100 },
         { text: "家族遗传", max: 100 },
         { text: "饮食习惯", max: 100 },
-        { text: "其他病史", max: 100 },
+        { text: "个人病史", max: 100 },
         { text: "药物使用", max: 100 },
       ],
       center: ["50%", "50%"],
@@ -67,7 +67,7 @@ var option = {
       },
       data: [
         {
-          value: [90, 60, 20, 20, 15, 15],
+          value: [90, 60, 20, 10, 55, 15],
           name: "风险因素",
           areaStyle: {
             color: "rgba(161, 161, 133, 0.8)",
