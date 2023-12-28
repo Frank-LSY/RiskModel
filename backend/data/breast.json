@@ -1,0 +1,163 @@
+[
+    {
+        "description": "曾经抽烟/仍在抽烟",
+        "relatedRisk": 1.1,
+        "prevalence": 0.22,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "体育锻炼, 至少每天30分钟 或 每周3小时",
+        "relatedRisk": 0.8,
+        "prevalence": 0.42,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "母亲或姐妹有乳腺癌",
+        "relatedRisk": 1.8,
+        "prevalence": 0.12,
+        "category": "family",
+        "bunch": 3
+    },
+    {
+        "description": "平均每天摄入至少8两(400g)蔬菜/水果",
+        "relatedRisk": 0.8,
+        "prevalence": 0.62,
+        "category": "diet",
+        "bunch": 4
+    },
+    {
+        "description": "饮酒, 平均每天约半瓶啤酒(250ml)/少许白酒(<1两) [每日酒精摄入约7g]",
+        "relatedRisk": 1.1,
+        "prevalence": 0.10,
+        "category": "diet",
+        "bunch": 5
+    },
+    {
+        "description": "饮酒, 平均每天约一瓶啤酒(500ml)/一两白酒 [每日酒精摄入约14g]",
+        "relatedRisk": 1.2,
+        "prevalence": 0.08,
+        "category": "diet",
+        "bunch": 5
+    },
+    {
+        "description": "饮酒, 平均每天大于两瓶啤酒(1000ml)/二两白酒 [每日酒精摄入≥28g]",
+        "relatedRisk": 1.3,
+        "prevalence": 0.02,
+        "category": "diet",
+        "bunch": 5
+    },
+    {
+        "description": "出生时体重超过7斤半(3.8kg)",
+        "relatedRisk": 1.5,
+        "prevalence": 0.12,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "7岁时超重 (BMI>29)",
+        "relatedRisk": 0.7,
+        "prevalence": 0.23,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "11岁及之前初潮",
+        "relatedRisk": 1.3,
+        "prevalence": 0.372,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "至少生育2次",
+        "relatedRisk": 0.85,
+        "prevalence": 0.43,
+        "category": "history",
+        "bunch": 9
+    },
+    {
+        "description": "首次生育>35岁",
+        "relatedRisk": 1.5,
+        "prevalence": 0.22,
+        "category": "history",
+        "bunch": 10
+    },
+    {
+        "description": "母乳喂养≥1年",
+        "relatedRisk": 0.8,
+        "prevalence": 0.63,
+        "category": "history",
+        "bunch": 11
+    },
+    {
+        "description": "绝经年龄≥55岁",
+        "relatedRisk": 1.2,
+        "prevalence": 0.54,
+        "category": "history",
+        "bunch": 12
+    },
+    {
+        "description": "身高超过170cm",
+        "relatedRisk": 1.3,
+        "prevalence": 0.152,
+        "category": "history",
+        "bunch": 13
+    },
+    {
+        "description": "自18岁之后, 体重增加, 10kg-20kg (不考虑雌激素作用)",
+        "relatedRisk": 1.61,
+        "prevalence": 0.26,
+        "category": "history",
+        "bunch": 14
+    },
+    {
+        "description": "自18岁之后, 体重增加, ≥20kg (不考虑雌激素作用)",
+        "relatedRisk": 1.99,
+        "prevalence": 0.24,
+        "category": "history",
+        "bunch": 14
+    },
+    {
+        "description": "正在口服避孕药",
+        "relatedRisk": 1.4,
+        "prevalence": 0.24,
+        "category": "medicine",
+        "bunch": 15
+    },
+    {
+        "description": "口服雌激素, ≥5年",
+        "relatedRisk": 1.3,
+        "prevalence": 0.04,
+        "category": "medicine",
+        "bunch": 16
+    },
+    {
+        "description": "口服雌激素+孕酮, <5年",
+        "relatedRisk": 1.3,
+        "prevalence": 0.05,
+        "category": "medicine",
+        "bunch": 16
+    },
+    {
+        "description": "口服雌激素+孕酮, ≥5年",
+        "relatedRisk": 2.3,
+        "prevalence": 0.02,
+        "category": "medicine",
+        "bunch": 16
+    },
+    {
+        "description": "核磁共振，乳房高密度",
+        "relatedRisk": 3.0,
+        "prevalence": 0.12,
+        "category": "medicine",
+        "bunch": 17
+    },
+    {
+        "description": "他莫昔芬/拉罗昔芬 用药，≥5年",
+        "relatedRisk": 0.6,
+        "prevalence": 0.017,
+        "category": "medicine",
+        "bunch": 18
+    }
+]
