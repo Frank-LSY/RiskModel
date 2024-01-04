@@ -126,21 +126,21 @@
         "bunch": 15
     },
     {
-        "description": "口服雌激素, ≥5年",
+        "description": "雌激素使用, ≥5年",
         "relatedRisk": 1.3,
         "prevalence": 0.04,
         "category": "medicine",
         "bunch": 16
     },
     {
-        "description": "口服雌激素+孕酮, <5年",
+        "description": "雌激素+孕酮 使用, <5年",
         "relatedRisk": 1.3,
         "prevalence": 0.05,
         "category": "medicine",
         "bunch": 16
     },
     {
-        "description": "口服雌激素+孕酮, ≥5年",
+        "description": "雌激素+孕酮 使用, ≥5年",
         "relatedRisk": 2.3,
         "prevalence": 0.02,
         "category": "medicine",
@@ -154,7 +154,7 @@
         "bunch": 17
     },
     {
-        "description": "他莫昔芬/拉罗昔芬 用药，≥5年",
+        "description": "他莫昔芬/拉罗昔芬 用药, ≥5年",
         "relatedRisk": 0.6,
         "prevalence": 0.017,
         "category": "medicine",

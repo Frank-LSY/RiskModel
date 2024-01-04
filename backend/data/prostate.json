@@ -1,0 +1,51 @@
+[
+    {
+        "description": "仍在抽烟",
+        "relatedRisk": 1.3,
+        "prevalence": 0.37,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "父亲或兄弟有前列腺癌",
+        "relatedRisk": 1.8,
+        "prevalence": 0.18,
+        "category": "family",
+        "bunch": 2
+    },
+    {
+        "description": "每周至少摄入250g番茄或番茄制品",
+        "relatedRisk": 0.7,
+        "prevalence": 0.38,
+        "category": "diet",
+        "bunch": 3
+    },
+    {
+        "description": "过量钙摄入",
+        "relatedRisk": 1.3,
+        "prevalence": 0.03,
+        "category": "diet",
+        "bunch": 4
+    },
+    {
+        "description": "男性身高超过178cm",
+        "relatedRisk": 1.3,
+        "prevalence": 0.42,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "BMI ≥30",
+        "relatedRisk": 1.3,
+        "prevalence": 0.1,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "亚裔",
+        "relatedRisk": 0.4,
+        "prevalence": 0.99,
+        "category": "history",
+        "bunch": 7
+    }
+]

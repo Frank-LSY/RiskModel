@@ -1,0 +1,163 @@
+[
+    {
+        "description": "仍在抽烟,女性",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟,男性",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "体育锻炼, 至少每天30分钟 或 每周3小时",
+        "relatedRisk": -2,
+        "prevalence": 0.42,
+        "category": "life",
+        "bunch": 3
+    },
+    {
+        "description": "直系亲属髋部骨折史",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "family",
+        "bunch": 4
+    },
+    {
+        "description": "直系亲属非髋部骨折史",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "family",
+        "bunch": 4
+    },
+    {
+        "description": "骨折病史",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "女性, 骨密度检测, 骨质疏松症",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "女性, <50岁, 骨密度检测, 骨量减少",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "女性, 50-65岁, 骨密度检测, 骨量减少",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "男性, 骨密度检测, 骨质疏松症",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "男性, <50岁, 骨密度检测, 骨量减少",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "男性, ≥50岁, 骨密度检测, 骨量减少",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "BMI < 18",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "类风湿性关节炎",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 9
+    },
+    {
+        "description": "糖尿病",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 10
+    },
+    {
+        "description": "男性, 口服类固醇",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 11
+    },
+    {
+        "description": "女性, 口服类固醇",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 12
+    },
+    {
+        "description": "女性, 使用雌激素",
+        "relatedRisk": -1,
+        "prevalence": 0.0,
+        "category": "history",
+        "bunch": 11
+    },
+    {
+        "description": "钙摄入量不足",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "diet",
+        "bunch": 12
+    },
+    {
+        "description": "绿叶菜摄入, 每周≥300g",
+        "relatedRisk": -1,
+        "prevalence": 0.0,
+        "category": "diet",
+        "bunch": 13
+    },
+    {
+        "description": "饮酒, 平均每天大于两瓶啤酒(1000ml)/二两白酒 [每日酒精摄入≥28g]",
+        "relatedRisk": 1,
+        "prevalence": 0.0,
+        "category": "diet",
+        "bunch": 14
+    },
+    {
+        "description": "过量维他命A摄入",
+        "relatedRisk": 2,
+        "prevalence": 0.0,
+        "category": "diet",
+        "bunch": 15
+    },
+    {
+        "description": "适量维他命D摄入",
+        "relatedRisk": -1,
+        "prevalence": 0.0,
+        "category": "diet",
+        "bunch": 16
+    }
+]

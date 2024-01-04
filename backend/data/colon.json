@@ -77,17 +77,17 @@
         "bunch": 10
     },
     {
-        "description": "口服避孕药 ≥5年",
+        "description": "口服避孕药, ≥5年",
         "relatedRisk": 0.7,
         "prevalence": 0.17,
-        "category": "history",
+        "category": "medicine",
         "bunch": 11
     },
     {
-        "description": "口服雌激素 ≥5年",
+        "description": "雌激素使用, ≥5年",
         "relatedRisk": 0.8,
         "prevalence": 0.17,
-        "category": "history",
+        "category": "medicine",
         "bunch": 12
     },
     {
@@ -124,5 +124,5 @@
         "prevalence": 0.006,
         "category": "medicine",
         "bunch": 17
-    },
+    }
 ]

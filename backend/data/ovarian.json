@@ -1,0 +1,107 @@
+[
+    {
+        "description": "母亲或姐妹有卵巢癌",
+        "relatedRisk": 1.8,
+        "prevalence": 0.18,
+        "category": "family",
+        "bunch": 1
+    },
+    {
+        "description": "BMI 25-29.9",
+        "relatedRisk": 1.1,
+        "prevalence": 0.3,
+        "category": "history",
+        "bunch": 2
+    },
+    {
+        "description": "BMI ≥30",
+        "relatedRisk": 1.3,
+        "prevalence": 0.1,
+        "category": "history",
+        "bunch": 2
+    },
+    {
+        "description": "生育至少2个孩子",
+        "relatedRisk": 0.52,
+        "prevalence": 0.1,
+        "category": "history",
+        "bunch": 3
+    },
+    {
+        "description": "母乳喂养≥1年",
+        "relatedRisk": 0.8,
+        "prevalence": 0.63,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "结扎输卵管",
+        "relatedRisk": 0.6,
+        "prevalence": 0.23,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "子宫切除",
+        "relatedRisk": 0.8,
+        "prevalence": 0.02,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "输卵管切除",
+        "relatedRisk": 0.55,
+        "prevalence": 0.02,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "子宫内膜异位",
+        "relatedRisk": 1.5,
+        "prevalence": 0.16,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "生殖器滑石粉使用, 每月至少8天",
+        "relatedRisk": 1.3,
+        "prevalence": 0.02,
+        "category": "history",
+        "bunch": 9
+    },
+    {
+        "description": "口服避孕药, 1-4年",
+        "relatedRisk": 0.8,
+        "prevalence": 0.2,
+        "category": "medicine",
+        "bunch": 10
+    },
+    {
+        "description": "口服避孕药, 5-9年",
+        "relatedRisk": 0.6,
+        "prevalence": 0.14,
+        "category": "medicine",
+        "bunch": 10
+    },
+    {
+        "description": "口服避孕药, 10-14年",
+        "relatedRisk": 0.5,
+        "prevalence": 0.09,
+        "category": "medicine",
+        "bunch": 10
+    },
+    {
+        "description": "口服避孕药, ≥15年",
+        "relatedRisk": 0.4,
+        "prevalence": 0.04,
+        "category": "medicine",
+        "bunch": 10
+    },
+    {
+        "description": "口服雌激素 ≥10年",
+        "relatedRisk": 1.3,
+        "prevalence": 0.03,
+        "category": "medicine",
+        "bunch": 11
+    }
+]

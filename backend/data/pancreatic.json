@@ -1,0 +1,79 @@
+[
+    {
+        "description": "仍在抽烟, <25支每天",
+        "relatedRisk": 1.3,
+        "prevalence": 0.25,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, ≥25支每天",
+        "relatedRisk": 2.2,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "父母或兄弟姐妹有胰腺癌",
+        "relatedRisk": 1.5,
+        "prevalence": 0.18,
+        "category": "family",
+        "bunch": 2
+    },
+    {
+        "description": "女性身高超过170cm, 男性身高超过178cm",
+        "relatedRisk": 1.7,
+        "prevalence": 0.22,
+        "category": "history",
+        "bunch": 3
+    },
+    {
+        "description": "糖尿病/高血糖症",
+        "relatedRisk": 2.0,
+        "prevalence": 0.17,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "BMI 25-29.9",
+        "relatedRisk": 1.2,
+        "prevalence": 0.3,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "BMI ≥30",
+        "relatedRisk": 1.5,
+        "prevalence": 0.1,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "慢性胰腺炎",
+        "relatedRisk": 3.0,
+        "prevalence": 0.4,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "A型血",
+        "relatedRisk": 1.4,
+        "prevalence": 0.2872,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "B型血",
+        "relatedRisk": 1.5,
+        "prevalence": 0.2817,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "AB型血",
+        "relatedRisk": 1.5,
+        "prevalence": 0.0891,
+        "category": "history",
+        "bunch": 7
+    }
+]
