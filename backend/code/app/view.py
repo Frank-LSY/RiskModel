@@ -18,7 +18,7 @@ def create_app():
 app = create_app()
 
 
-def api_response(code=200, message='success', data=[]):
+def api_response(code=204, message='no content', data=[]):
     response = {
         'code': code,
         'message': message,
@@ -80,7 +80,7 @@ def insert_poll():
                     db.session.add(riskDetailEntry)
                     db.session.commit()
 
-    return api_response(message='insert success')
+    return api_response(code=201, message='insert success')
 
 
 # 获取所有用户
@@ -99,11 +99,11 @@ def get_users():
         }
         serialized_users.append(serialized_user)
 
-    return api_response(data=serialized_users)
+    return api_response(code=200, message='success', data=serialized_users)
 
 
 # 获取某用户的所有问卷
-@app.route('/polls')
+@app.route('/user_polls')
 def get_polls():
     from .model import Poll
 
@@ -120,7 +120,7 @@ def get_polls():
         }
         serialized_polls.append(serialized_poll)
 
-    return api_response(data=serialized_polls)
+    return api_response(code=200, message='success', data=serialized_polls)
 
 
 # 获取某疾病的所有风险
@@ -145,11 +145,11 @@ def get_risks():
         }
         serialized_risks.append(serialized_risk)
 
-    return api_response(data=serialized_risks)
+    return api_response(code=200, message='success', data=serialized_risks)
 
 
 # 获取某问卷，某疾病，所有风险
-@app.route('/risks_detail')
+@app.route('/poll_risks')
 def get_risks_detail():
     from .model import Poll, PollDetail, Disease, Risk, RiskDetail
     pollId = request.args.get('pollId')             # 问卷id
@@ -173,4 +173,4 @@ def get_risks_detail():
         }
         serialized_risks.append(serialized_risk)
 
-    return api_response(data=serialized_risks)
+    return api_response(code=200, message='success', data=serialized_risks)

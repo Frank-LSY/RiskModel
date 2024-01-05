@@ -4,7 +4,7 @@
       class="z-50 overflow-auto relative bg-gray-100 bg-opacity-70 h-vint w-5/6 sm:w-2/3 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-2xl flex flex-wrap content-start justify-center"
     >
       <div class="text-lg font-semibold text-gray-700 py-4 w-2/3 my-1">
-        请输入身份证号 
+        请输入身份证号
       </div>
       <input
         class="pl-2 w-2/3 my-1"
@@ -12,9 +12,12 @@
         type="text"
         placeholder="身份证号"
       />
+      <div class="text-red-500 font-semibold text-right w-2/3" v-if="showPS">
+        请输入身份证号!
+      </div>
       <button
         class="absolute bottom-2 right-4 w-1/4 py-0.5 bg-amber-300 rounded shadow-lg"
-        @click="showHistory = true"
+        @click="showHistory()"
       >
         确认
       </button>
@@ -22,7 +25,7 @@
     <div class="h-deux w-full"></div>
     <div
       class="z-50 h-quarantecinq w-5/6 sm:w-2/3 overflow-auto text-right bg-gray-100 bg-opacity-60 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-2xl flex flex-wrap justify-center content-start"
-      v-if="showHistory"
+      v-if="showList"
     >
       <div class="text-lg font-semibold w-2/3">
         您有<span class="text-amber-500">{{ reportList.length }}</span
@@ -35,7 +38,7 @@
           :key="i"
         >
           <div class="col-span-3 border-r-4 border-gray-400 py-2">
-            {{ item.name }}
+            {{ item.description }}
           </div>
           <div class="col-span-2">
             <button
@@ -52,28 +55,43 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
+import API from "@/api.js";
 
 const router = useRouter();
 const store = useStore();
 
 const personid = ref("");
 
-const showHistory = ref(false);
+const showList = ref(false);
+const showPS = ref(false);
+const showHistory = () => {
+  if (personid.value === "") {
+    showPS.value = true;
+  } else {
+    showPS.value = false;
+    showList.value = true;
+    getPoll();
+  }
+};
 
 const showDetail = () => {
   store.commit("changeLoginStatus", true);
   router.push("history");
 };
 
-const reportList = [
-  {
-    name: "我的体检报告",
-  },
-  {
-    name: "我的体检报告 2",
-  },
-];
+const reportList = ref([]);
+
+const getPoll = () => {
+  API.userPolls({
+    userId: personid.value,
+  }).then((res) => {
+    reportList.value = res.data;
+    console.log(res.data);
+  });
+};
+
+onMounted(() => {});
 </script>

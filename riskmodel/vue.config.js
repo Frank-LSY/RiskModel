@@ -14,12 +14,12 @@ module.exports = {
     port: 8088,
     open: false,
     proxy: {
-      '/polls': {
-        target: 'http://127.0.0.1:9000',
+      '/ydr': {
+        target: 'http://127.0.0.1:5000',
         changeOrigin: true,
         secure: false,
         pathRewrite: {
-          '^/data': '/data'
+          '^/ydr': ''
         }
       },
     }
