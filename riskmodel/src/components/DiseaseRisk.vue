@@ -11,7 +11,7 @@
       class="w-full overflow-auto scroll h-soixantedixhuit rounded-2xl shadow-lg z-50 divide-y-4 divide-double divide-gray-100"
     >
       <div
-        class="absolute right-2 top-2 text-xl font-bold cursor-pointer select-none"
+        class="absolute right-2 top-2 text-xl font-bold cursor-pointer select-none z-50"
         @click="closeDetail"
       >
         X
@@ -68,15 +68,15 @@
           <span class="text-gray-400 text-sm">(点击可改变以查看)</span>
         </div>
         <div
-          v-for="(item, i) in showContribution"
+          v-for="(item, i) in store.getters.getCurrentDetails"
           :key="i"
           class="w-5/6 flex flex-wrap justify-end font-semibold"
         >
           <div
-            class="relative w-full rounded shadow-lg text-gray-50 pl-2 my-0.5 border-2 border-gray-400 cursor-pointer select-none"
-            :style="{ 'background-color': calculateColor(item.risk) }"
+            class="relative w-full rounded shadow-lg text-gray-50 px-1 my-0.5 border-2 border-gray-400 cursor-pointer select-none"
+            :style="{ 'background-color': calculateColor(item.rr) }"
           >
-            <div @click="showChange(item, i)">{{ item.name }}</div>
+            <div @click="showChange(item, i)">{{ item.description }}</div>
             <div
               class="absolute left-0 w-full flex flex-wrap z-50 bg-gray-200 bg-opacity-90 animatecss animatecss-fadeIn"
               v-if="changeSelect === i"
@@ -99,7 +99,7 @@
           <div
             class="w-1/3 text-center border-2 border-gray-400 rounded shadow text-gray-700 text-sm md:text-base"
           >
-            {{ item.RR }}
+            RR = {{ item.rr }}
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@ import { useStore } from "vuex";
 import { infoMessage, warningMessage } from "@/assets/js/common";
 
 import Radar from "@charts/Radar.vue";
-import Declare from "@disease/Declare.vue"
+import Declare from "@disease/Declare.vue";
 
 const router = useRouter();
 const store = useStore();
@@ -152,57 +152,57 @@ const resetRisk = () => {
 const currentItem = ref({});
 // 展示可改变的项目
 const showChange = (item, i) => {
-  if (item.change.length === 0) {
-    infoMessage("该风险因素无法改变！");
-    return;
-  }
-  currentItem.value = item;
-  if (changeSelect.value === i) {
-    changeSelect.value = -1;
-  } else {
-    changeSelect.value = i;
-  }
+  // if (item.change.length === 0) {
+  //   infoMessage("该风险因素无法改变！");
+  //   return;
+  // }
+  // currentItem.value = item;
+  // if (changeSelect.value === i) {
+  //   changeSelect.value = -1;
+  // } else {
+  //   changeSelect.value = i;
+  // }
 };
 // 改变某一风险因素
 const changeRisk = (index, neoItem) => {
-  changeSelect.value = ref(-1);
-  isChanged.value = true;
-  showContribution.value[index]["name"] = neoItem["name"];
-  var riskDiff = neoItem["risk"] - showContribution.value[index]["risk"];
-  if (riskDiff > 0) {
-    showContribution.value[index]["RR"] =
-      "RR = " + showContribution.value[index]["risk"] + " + " + riskDiff;
-  } else {
-    showContribution.value[index]["RR"] =
-      "RR = " + showContribution.value[index]["risk"] + " - " + Math.abs(riskDiff);
-  }
-  showContribution.value[index]["risk"] = neoItem["risk"];
-  showContribution.value[index]["change"] = neoItem["change"];
-  severity_num.value = Math.floor(Math.random() * 7)
+  // changeSelect.value = ref(-1);
+  // isChanged.value = true;
+  // showContribution.value[index]["name"] = neoItem["name"];
+  // var riskDiff = neoItem["risk"] - showContribution.value[index]["risk"];
+  // if (riskDiff > 0) {
+  //   showContribution.value[index]["RR"] =
+  //     "RR = " + showContribution.value[index]["risk"] + " + " + riskDiff;
+  // } else {
+  //   showContribution.value[index]["RR"] =
+  //     "RR = " + showContribution.value[index]["risk"] + " - " + Math.abs(riskDiff);
+  // }
+  // showContribution.value[index]["risk"] = neoItem["risk"];
+  // showContribution.value[index]["change"] = neoItem["change"];
+  // severity_num.value = Math.floor(Math.random() * 7)
 };
 
 const state2description = () => {
   var diseaseRisk = "";
   switch (severity.value) {
-    case "1":
+    case 1:
       diseaseRisk = "风险远远低于平均水平 (风险---)";
       break;
-    case "2":
+    case 2:
       diseaseRisk = "风险远低于平均水平 (风险--)";
       break;
-    case "3":
+    case 3:
       diseaseRisk = "风险低于平均水平 (风险-)";
       break;
-    case "4":
+    case 4:
       diseaseRisk = "风险约为平均水平 (风险)";
       break;
-    case "5":
+    case 5:
       diseaseRisk = "风险高于平均水平 (风险+)";
       break;
-    case "6":
+    case 6:
       diseaseRisk = "风险远高于平均水平 (风险++)";
       break;
-    case "7":
+    case 7:
       diseaseRisk = "风险远远高于平均水平 (风险+++)";
       break;
   }
@@ -283,11 +283,15 @@ const contribution = [
 ];
 
 const calculateColor = (risk) => {
-  var color = Math.ceil(Math.log(risk) + 4);
-  if (color > 0) {
-    return state2Color[color];
-  } else {
+  if (risk < 1) {
     return state2Color[1];
+  } else {
+    var color = Math.ceil(Math.log(risk) + 4);
+    if (color > 0) {
+      return state2Color[color];
+    } else {
+      return state2Color[1];
+    }
   }
 };
 
@@ -304,7 +308,7 @@ const calculateChangedColor = (risk, neoRisk) => {
 };
 
 onMounted(() => {
-  severity.value = store.getters.getCurrentDisease["severity"];
+  severity.value = store.getters.getCurrentDisease["riskScore"];
   severity_num.value = Number(severity.value) - 1;
   showContribution.value = JSON.parse(JSON.stringify(contribution));
 });

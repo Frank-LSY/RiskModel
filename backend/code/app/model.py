@@ -14,7 +14,7 @@ class User(db.Model):
     userId = db.Column(db.String(255), primary_key=True, unique=True)
     userName = db.Column(db.String(255))
     age = db.Column(db.Integer)
-    sex = db.Column(db.Enum('male', 'female'))
+    sex = db.Column(db.Enum('男性', '女性'))
 
 
 # 问卷表
@@ -57,8 +57,7 @@ class Risk(db.Model):
 class PollDetail(db.Model):
     __tablename__ = "ydr_polldetail"
     __table_args__ = (
-        db.PrimaryKeyConstraint('diseaseId', name='ydr_disease_diseaseId'),
-        db.PrimaryKeyConstraint('pollId', name='ydr_poll_pollId')
+        db.PrimaryKeyConstraint('diseaseId', 'pollId', name='ydr_polldetail_pkey'),
     )
 
     diseaseId = db.Column(
@@ -71,9 +70,8 @@ class PollDetail(db.Model):
 class RiskDetail(db.Model):
     __tablename__ = "ydr_riskdetail"
     __table_args__ = (
-        db.PrimaryKeyConstraint('riskId', name='ydr_risk_riskId'),
-        db.PrimaryKeyConstraint('diseaseId', name='ydr_disease_diseaseId'),
-        db.PrimaryKeyConstraint('pollId', name='ydr_poll_pollId')
+        db.PrimaryKeyConstraint('riskId', 'diseaseId',
+                                'pollId', name='ydr_riskdetail_pkey'),
     )
 
     riskId = db.Column(

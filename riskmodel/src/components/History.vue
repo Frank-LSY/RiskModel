@@ -9,9 +9,9 @@
     <div
       class="w-5/6 sm:w-2/3 z-30 overflow-auto text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center content-evenly text-center"
     >
-      <div class="w-2/3">姓名: 测试</div>
-      <div class="w-2/3">性别: 女性</div>
-      <div class="w-2/3">年龄: 38</div>
+      <div class="w-2/3">姓名: {{ store.getters.getCurrentUser.userName }}</div>
+      <div class="w-2/3">性别: {{ store.getters.getCurrentUser.sex }}</div>
+      <div class="w-2/3">年龄: {{ store.getters.getCurrentUser.age }}</div>
     </div>
     <div class="h-cinq w-5/6 sm:w-2/3 flex flex-wrap content-center z-30">
       <div class="text-sm md:text-base text-gray-600 font-semibold">
@@ -29,20 +29,23 @@
       </div>
       <div
         class="col-span-11 text-center divide-y-4 divide-double divide-gray-200"
+        v-if="store.getters.getCurrentPoll.length!==0"
       >
         <div class="flex flex-wrap justify-evenly w-full">
           <div class="text-gray-600 font-semibold mt-2">癌症风险:</div>
           <div class="flex flex-wrap justify-evenly w-full my-3">
             <div
-              v-for="(item, i) in cancer"
+              v-for="i in cancerOrder"
               :key="i"
               :style="{
-                'background-color': state2Color[item.severity],
+                'background-color': score2Color(
+                  store.getters.getCurrentPoll[i]['riskScore']
+                ),
               }"
               class="w-1/4 mx-0.5 my-1 px-1 py-1 border-2 border-gray-400 rounded text-sm md:text-base text-gray-100 font-semibold shadow-lg cursor-pointer"
-              @click="showDetail(item)"
+              @click="showDetail(store.getters.getCurrentPoll[i])"
             >
-              {{ item.name }}
+              {{ store.getters.getCurrentPoll[i]["diseaseName"] }}
             </div>
           </div>
         </div>
@@ -51,15 +54,17 @@
           <div class="text-gray-600 font-semibold mt-2">慢性病风险:</div>
           <div class="flex flex-wrap justify-evenly w-full my-3">
             <div
-              v-for="(item, i) in chronic"
+              v-for="i in chronicOrder"
               :key="i"
               :style="{
-                'background-color': state2Color[item.severity],
+                'background-color': score2Color(
+                  store.getters.getCurrentPoll[i]['riskScore']
+                ),
               }"
               class="w-1/4 mx-0.5 my-1 px-1 py-1 border-2 border-gray-400 rounded text-sm md:text-base text-gray-100 font-semibold shadow-lg cursor-pointer"
-              @click="showDetail(item)"
+              @click="showDetail(store.getters.getCurrentPoll[i])"
             >
-              {{ item.name }}
+              {{ store.getters.getCurrentPoll[i]["diseaseName"] }}
             </div>
           </div>
         </div>
@@ -77,7 +82,11 @@
         </div>
       </div>
     </div>
-    <disease-risk v-if="diseaseDialog" class="animatecss animatecss-fadeIn" @close-detail="closeDetailDialog">
+    <disease-risk
+      v-if="diseaseDialog"
+      class="animatecss animatecss-fadeIn"
+      @close-detail="closeDetailDialog"
+    >
     </disease-risk>
   </div>
 </template>
@@ -88,6 +97,7 @@ import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import { infoMessage, warningMessage } from "@/assets/js/common";
 import DiseaseRisk from "./DiseaseRisk.vue";
+import API from "@/api.js";
 
 const router = useRouter();
 const store = useStore();
@@ -98,97 +108,130 @@ const goBack = () => {
 
 const diseaseDialog = ref(false);
 const showDetail = (item) => {
-  console.log(item.name);
-  console.log(diseaseDialog.value);
-  store.commit("changeCurrentDisease", item);
-  diseaseDialog.value = true;
+  API.pollRisks({
+    pollId: store.getters.getCurrentPollId,
+    diseaseId: item.diseaseId,
+  }).then((res) => {
+    console.log(res.data);
+    store.commit("changeCurrentDetails", res.data);
+    store.commit("changeCurrentDisease", {
+      name: item.diseaseName,
+      id: item.diseaseId,
+      riskScore: Math.ceil(item.riskScore),
+    });
+    diseaseDialog.value = true;
+  });
 };
-const closeDetailDialog = (val)=> {
+const closeDetailDialog = (val) => {
   store.commit("changeCurrentDisease", {});
-  diseaseDialog.value = val
-}
+  diseaseDialog.value = val;
+};
 
 onMounted(() => {
   if (store.getters.getLogin === false) {
     infoMessage("未登录");
     goBack();
   }
+  console.log(store.getters.getCurrentUser);
+  console.log(store.getters.getCurrentPoll);
 });
 
-const cancer = [
-  {
-    name: "膀胱癌",
-    severity: "1",
-  },
-  {
-    name: "乳腺癌",
-    severity: "2",
-  },
-  {
-    name: "宫颈癌",
-    severity: "3",
-  },
-  {
-    name: "大肠癌",
-    severity: "4",
-  },
-  {
-    name: "肾癌",
-    severity: "5",
-  },
-  {
-    name: "肺癌√",
-    severity: "6",
-  },
-  {
-    name: "黑色素瘤",
-    severity: "7",
-  },
-  {
-    name: "卵巢癌",
-    severity: "6",
-  },
-  {
-    name: "胰腺癌",
-    severity: "5",
-  },
-  {
-    name: "前列腺癌",
-    severity: "4",
-  },
-  {
-    name: "胃癌",
-    severity: "3",
-  },
-  {
-    name: "子宫癌",
-    severity: "2",
-  },
-];
+// const cancer = [
+//   "膀胱癌",
+//   "乳腺癌",
+//   "宫颈癌",
+//   "大肠癌",
+//   "肾癌",
+//   "肺癌",
+//   "黑色素瘤",
+//   "卵巢癌",
+//   "胰腺癌",
+//   "前列腺癌",
+//   "胃癌",
+//   "子宫癌",
+// ];
 
-const chronic = [
-  {
-    name: "支气管炎/肺气肿",
-    severity: "1",
-  },
-  {
-    name: "糖尿病",
-    severity: "6",
-  },
-  {
-    name: "心血管疾病",
-    severity: "5",
-  },
-  {
-    name: "骨质疏松",
-    severity: "1",
-  },
-  {
-    name: "中风",
-    severity: "7",
-  },
-];
+const cancerOrder = [10, 4, 5, 11, 13, 15, 8, 2, 12, 7, 16, 3];
+const chronicOrder = [0, 9, 6, 1, 14];
+// const chronic = ["支气管炎/肺气肿", "糖尿病", "心血管疾病", "骨质疏松", "中风"];
 
+// const cancer = [
+//   {
+//     name: "膀胱癌",
+//     severity: "1",
+//   },
+//   {
+//     name: "乳腺癌",
+//     severity: "2",
+//   },
+//   {
+//     name: "宫颈癌",
+//     severity: "3",
+//   },
+//   {
+//     name: "大肠癌",
+//     severity: "4",
+//   },
+//   {
+//     name: "肾癌",
+//     severity: "5",
+//   },
+//   {
+//     name: "肺癌√",
+//     severity: "6",
+//   },
+//   {
+//     name: "黑色素瘤",
+//     severity: "7",
+//   },
+//   {
+//     name: "卵巢癌",
+//     severity: "6",
+//   },
+//   {
+//     name: "胰腺癌",
+//     severity: "5",
+//   },
+//   {
+//     name: "前列腺癌",
+//     severity: "4",
+//   },
+//   {
+//     name: "胃癌",
+//     severity: "3",
+//   },
+//   {
+//     name: "子宫癌",
+//     severity: "2",
+//   },
+// ];
+
+// const chronic = [
+//   {
+//     name: "支气管炎/肺气肿",
+//     severity: "1",
+//   },
+//   {
+//     name: "糖尿病",
+//     severity: "6",
+//   },
+//   {
+//     name: "心血管疾病",
+//     severity: "5",
+//   },
+//   {
+//     name: "骨质疏松",
+//     severity: "1",
+//   },
+//   {
+//     name: "中风",
+//     severity: "7",
+//   },
+// ];
+
+const score2Color = (score) => {
+  return state2Color[Math.ceil(score)];
+};
 const state2Color = {
   1: "#34d499",
   2: "#64d179",

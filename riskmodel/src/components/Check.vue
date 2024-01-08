@@ -43,7 +43,7 @@
           <div class="col-span-2">
             <button
               class="py-1 px-2 m-1 bg-amber-300 rounded shadow-lg border border-amber-400"
-              @click="showDetail"
+              @click="getPollDetail(item.pollId)"
             >
               查看
             </button>
@@ -73,16 +73,27 @@ const showHistory = () => {
   } else {
     showPS.value = false;
     showList.value = true;
+    getUser();
     getPoll();
   }
 };
 
-const showDetail = () => {
-  store.commit("changeLoginStatus", true);
-  router.push("history");
-};
+// const showDetail = (pollid) => {
+//   store.commit("changeLoginStatus", true);
+//   router.push("history");
+//   getPollDetail(pollid);
+// };
 
 const reportList = ref([]);
+
+const getUser = () => {
+  API.user({
+    userId: personid.value,
+  }).then((res) => {
+    console.log(res.data);
+    store.commit("changeCurrentUser", res.data[0]);
+  });
+};
 
 const getPoll = () => {
   API.userPolls({
@@ -90,6 +101,17 @@ const getPoll = () => {
   }).then((res) => {
     reportList.value = res.data;
     console.log(res.data);
+  });
+};
+
+const getPollDetail = (pollid) => {
+  API.pollDetails({
+    pollId: pollid,
+  }).then((res) => {
+    store.commit("changeCurrentPoll", res.data);
+    store.commit("changeCurrentPollId", pollid);
+    store.commit("changeLoginStatus", true);
+    router.push("history");
   });
 };
 

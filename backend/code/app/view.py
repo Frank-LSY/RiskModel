@@ -101,6 +101,26 @@ def get_users():
 
     return api_response(code=200, message='success', data=serialized_users)
 
+# 获取某个用户
+
+
+@app.route('/user')
+def get_user():
+    from .model import User  # 延迟导入，解决循环导入问题
+    userId = request.args.get('userId')
+    user = User.query.filter_by(userId=userId).first()
+    serialized_users = []
+
+    serialized_user = {
+        'userId': user.userId,
+        'userName': user.userName,
+        'age': user.age,
+        'sex': user.sex
+    }
+    serialized_users.append(serialized_user)
+
+    return api_response(code=200, message='success', data=serialized_users)
+
 
 # 获取某用户的所有问卷
 @app.route('/user_polls')
@@ -148,14 +168,61 @@ def get_risks():
     return api_response(code=200, message='success', data=serialized_risks)
 
 
+# 获取某疾病，同一类别的所有风险
+@app.route('/bunch_risks')
+def get_bunch_risks():
+    from .model import Risk
+
+    diseaseId = request.args.get('diseaseId')
+    bunch = request.args.get('bunch')
+    risks = Risk.query.filter_by(
+        diseaseId=diseaseId, bunch=bunch
+    ).all()
+    serialized_risks = []
+
+    for risk in risks:
+        serialized_risk = {
+            'description': risk.description,
+            'category': risk.category,
+            'bunch': risk.bunch
+        }
+        serialized_risks.append(serialized_risk)
+
+    return api_response(code=200, message='success', data=serialized_risks)
+
+
+# 获取某问卷，所有疾病单风险
+
+
+@app.route('/poll_details')
+def get_poll_detail():
+    from .model import PollDetail, Disease
+
+    pollId = request.args.get('pollId')
+    pollDetails = PollDetail.query.filter(
+        PollDetail.pollId == pollId).all()
+    serialized_pollDetails = []
+
+    for pollDetail in pollDetails:
+        diseaseIName = Disease.query.filter_by(            # 疾病id
+            diseaseId=pollDetail.diseaseId).first().diseaseName
+        serialized_pollDetail = {
+            'diseaseName': diseaseIName,
+            'diseaseId': pollDetail.diseaseId,
+            'riskScore': pollDetail.riskScore
+        }
+        serialized_pollDetails.append(serialized_pollDetail)
+
+    return api_response(code=200, message='success', data=serialized_pollDetails)
+
+
 # 获取某问卷，某疾病，所有风险
 @app.route('/poll_risks')
 def get_risks_detail():
-    from .model import Poll, PollDetail, Disease, Risk, RiskDetail
+    from .model import Risk, RiskDetail
+
     pollId = request.args.get('pollId')             # 问卷id
-    diseaseName = request.args.get('diseaseName')   # 疾病名
-    diseaseId = Disease.query.filter_by(            # 疾病id
-        diseaseName=diseaseName).first().diseaseId
+    diseaseId = request.args.get('diseaseId')   # 疾病名
 
     riskIds = RiskDetail.query.filter_by(
         diseaseId=diseaseId, pollId=pollId).with_entities(RiskDetail.riskId).all()
@@ -166,9 +233,9 @@ def get_risks_detail():
 
     for risk in risks:
         serialized_risk = {
-            'diseaseName': diseaseName,
             'description': risk.description,
             'category': risk.category,
+            'rr': risk.relatedRisk,
             'bunch': risk.bunch
         }
         serialized_risks.append(serialized_risk)
