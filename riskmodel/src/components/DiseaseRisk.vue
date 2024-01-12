@@ -41,7 +41,7 @@
         class="w-full flex flex-wrap justify-center content-start text-gray-700 font-semibold pt-2"
       >
         <div
-          class="w-5/6 h-cinq bg-gradient-to-r from-emerald-400 via-yellow-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center border-2 border-gray-400"
+          class="w-5/6 h-trois bg-gradient-to-r from-emerald-400 via-yellow-400 to-rose-500 rounded text-gray-100 font-semibold flex flex-wrap justify-between content-center border-2 border-gray-400"
         >
           <div class="px-1">低风险</div>
           <div class="px-1">高风险</div>
@@ -54,6 +54,10 @@
           </div>
         </div>
       </div>
+      <!-- 肺癌相关信息 -->
+      <lung-result
+        v-if="store.getters.getCurrentDisease['name'] === '肺癌'"
+      ></lung-result>
       <!-- 选项块 -->
       <div class="w-full flex flex-wrap justify-evenly content-start relative">
         <button
@@ -65,7 +69,7 @@
         </button>
         <div class="w-5/6 text-start text-gray-700 font-semibold">
           您的风险因素如下:
-          <span class="text-gray-400 text-sm">(点击可改变以查看)</span>
+          <!-- <span class="text-gray-400 text-sm">(点击可改变以查看)</span> -->
         </div>
         <div
           v-for="(item, i) in store.getters.getCurrentDetails"
@@ -77,7 +81,7 @@
             :style="{ 'background-color': calculateColor(item.rr) }"
           >
             <div @click="showChange(item, i)">{{ item.description }}</div>
-            <div
+            <!-- <div
               class="absolute left-0 w-full flex flex-wrap z-50 bg-gray-200 bg-opacity-90 animatecss animatecss-fadeIn"
               v-if="changeSelect === i"
             >
@@ -93,18 +97,27 @@
               >
                 {{ it.name }}
               </div>
-              <!-- {{ item.change }} -->
-            </div>
+              {{ item.change }}
+            </div> -->
           </div>
           <div
             class="w-1/3 text-center border-2 border-gray-400 rounded shadow text-gray-700 text-sm md:text-base"
           >
-            RR = {{ item.rr }}
+            风险(
+            {{
+              item.rr > 0 ? "+".repeat(item.rr) : "-".repeat(Math.abs(item.rr))
+            }}
+            )
           </div>
         </div>
       </div>
       <!-- 雷达图 -->
-      <Radar></Radar>
+      <Radar v-if="store.getters.getCurrentDisease['name'] !== '肺癌'"></Radar>
+      <lung-bar
+        v-if="store.getters.getCurrentDisease['name'] === '肺癌'"
+        :status="status"
+      ></lung-bar>
+
       <!-- 说明 -->
       <Declare></Declare>
     </div>
@@ -119,6 +132,8 @@ import { infoMessage, warningMessage } from "@/assets/js/common";
 
 import Radar from "@charts/Radar.vue";
 import Declare from "@disease/Declare.vue";
+import LungResult from "@disease/LungResult.vue";
+import LungBar from "@charts/LungBar.vue";
 
 const router = useRouter();
 const store = useStore();
@@ -126,6 +141,7 @@ const store = useStore();
 // 点击关闭
 const emit = defineEmits(["closeDetail"]);
 const closeDetail = () => {
+  // store.commit("changeLungStatus", "");
   let showDetail = false;
   emit("closeDetail", showDetail);
 };
@@ -307,8 +323,19 @@ const calculateChangedColor = (risk, neoRisk) => {
   }
 };
 
+// 肺癌等级
+const status = ref(store.getters.getLungStatus);
+
 onMounted(() => {
-  severity.value = store.getters.getCurrentDisease["riskScore"];
+  console.log(store.getters.getCurrentDisease);
+  if (store.getters.getCurrentDisease["riskScore"] <= 0) {
+    severity.value = 1;
+  } else if (store.getters.getCurrentDisease["riskScore"] >= 7) {
+    severity = 7;
+  } else {
+    severity.value = store.getters.getCurrentDisease["riskScore"];
+  }
+
   severity_num.value = Number(severity.value) - 1;
   showContribution.value = JSON.parse(JSON.stringify(contribution));
 });

@@ -3,7 +3,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-import { infoMessage,errorMessage } from './common'
+import { infoMessage, errorMessage } from './common'
 //响应拦截器
 axios.interceptors.response.use(
     function (response) {
@@ -42,16 +42,10 @@ const request = function (query) {
             if (res.status === 500) { //判断是否和后端连上了
                 errorMessage('与后端数据连接断开!')
             } else if (res.status === 200) { //如果和后端连上了
-                
+
                 if (res.data.code === 200) { //如果后端说请求正确，直接返回
                     return Promise.resolve(res.data)
-                } else if (res.data.code === 401 ||
-                    res.data.code === 502) { //如果后端觉得权限不足
-                    return Promise.reject(res.data)
-                } else if (res.data.code === 1003 ||
-                    res.data.code === 1002) { //如果后端说登录被踢了或掉线了
-                    // console.log('未登录！')
-                    infoMessage('未登录！')
+                } else if (res.data.code === 404) { //如果后端觉得权限不足
                     return Promise.reject(res.data)
                 } else { //其他全给拒掉
                     console.log(res)

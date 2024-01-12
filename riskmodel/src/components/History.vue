@@ -29,7 +29,7 @@
       </div>
       <div
         class="col-span-11 text-center divide-y-4 divide-double divide-gray-200"
-        v-if="store.getters.getCurrentPoll.length!==0"
+        v-if="store.getters.getCurrentPoll.length !== 0"
       >
         <div class="flex flex-wrap justify-evenly w-full">
           <div class="text-gray-600 font-semibold mt-2">癌症风险:</div>
@@ -132,8 +132,6 @@ onMounted(() => {
     infoMessage("未登录");
     goBack();
   }
-  console.log(store.getters.getCurrentUser);
-  console.log(store.getters.getCurrentPoll);
 });
 
 // const cancer = [
@@ -230,7 +228,11 @@ const chronicOrder = [0, 9, 6, 1, 14];
 // ];
 
 const score2Color = (score) => {
-  return state2Color[Math.ceil(score)];
+  if (score < 1) {
+    return state2Color[1];
+  } else {
+    return state2Color[Math.ceil(score)];
+  }
 };
 const state2Color = {
   1: "#34d499",

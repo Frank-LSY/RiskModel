@@ -519,6 +519,7 @@ module.exports = {
         full: '100%',
         screen: '100vh',
         deux: '2vh',
+        trois: '3vh',
         cinq: '5vh',
         huit: '8vh',
         dix: '10vh',

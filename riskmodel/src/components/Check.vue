@@ -59,6 +59,7 @@ import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import API from "@/api.js";
+import { infoMessage } from "@/assets/js/common";
 
 const router = useRouter();
 const store = useStore();
@@ -72,7 +73,7 @@ const showHistory = () => {
     showPS.value = true;
   } else {
     showPS.value = false;
-    showList.value = true;
+
     getUser();
     getPoll();
   }
@@ -90,8 +91,11 @@ const getUser = () => {
   API.user({
     userId: personid.value,
   }).then((res) => {
-    console.log(res.data);
     store.commit("changeCurrentUser", res.data[0]);
+    showList.value = true;
+  }).catch((err)=>
+  {
+    infoMessage(err)
   });
 };
 
@@ -100,7 +104,8 @@ const getPoll = () => {
     userId: personid.value,
   }).then((res) => {
     reportList.value = res.data;
-    console.log(res.data);
+  }).catch((err)=>{
+    infoMessage(err)
   });
 };
 

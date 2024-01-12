@@ -24,7 +24,7 @@ class Poll(db.Model):
     pollId = db.Column(db.String(255), primary_key=True,
                        unique=True, default=uuid.uuid4)
     description = db.Column(db.String(255))
-    userId = db.Column(db.String(255))
+    userId = db.Column(db.String(255), db.ForeignKey('ydr_user.userId'))
     time = db.Column(db.DateTime, onupdate=datetime.now, default=datetime.now)
 
 
@@ -57,7 +57,8 @@ class Risk(db.Model):
 class PollDetail(db.Model):
     __tablename__ = "ydr_polldetail"
     __table_args__ = (
-        db.PrimaryKeyConstraint('diseaseId', 'pollId', name='ydr_polldetail_pkey'),
+        db.PrimaryKeyConstraint('diseaseId', 'pollId',
+                                name='ydr_polldetail_pkey'),
     )
 
     diseaseId = db.Column(
@@ -79,3 +80,28 @@ class RiskDetail(db.Model):
     diseaseId = db.Column(
         db.String(255), db.ForeignKey('ydr_disease.diseaseId'))
     pollId = db.Column(db.String(255), db.ForeignKey('ydr_poll.pollId'))
+
+
+# 肺癌分数表
+class LungProb(db.Model):
+    __tablename__ = 'ydr_lungscoreprob'
+    id = db.Column(db.Integer, primary_key=True, unique=True)
+    year = db.Column(db.String(255))
+    smoke = db.Column(db.Enum('NEVER', 'LIGHT', 'HEAVY'))
+    point = db.Column(db.Integer)
+    probability = db.Column(db.Float)
+
+
+# 肺癌细节表
+class LungDetail(db.Model):
+    __tablename__ = "ydr_lungdetail"
+    __table_args__ = (
+        db.PrimaryKeyConstraint(
+            'pollId', name='ydr_lungdetail_pkey'),
+    )
+
+    pollId = db.Column(db.String(255), db.ForeignKey('ydr_poll.pollId'))
+    status = db.Column(db.String(255))
+    intensity = db.Column(db.String(255))
+    probability = db.Column(db.Float)
+    score = db.Column(db.Float)

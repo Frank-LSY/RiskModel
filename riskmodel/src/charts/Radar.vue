@@ -1,5 +1,5 @@
 <template>
-  <div id="radar" class="h-trente w-full lg:w-1/2 relative"></div>
+  <div id="radar" class="h-trente w-full relative"></div>
 </template>
 
 <script setup>

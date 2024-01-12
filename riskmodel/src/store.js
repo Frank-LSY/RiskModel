@@ -8,7 +8,8 @@ export default createStore({
         currentPoll: [], //当前问卷信息
         currentPollId: '', //当前问卷id
         currentDisease: {}, // 当前是那种疾病
-        currentDetails: [] //当前疾病具体风险值
+        currentDetails: [], //当前疾病具体风险值
+        lungStatus : '',
     },
     getters: {
         getChineseStyle: (state) => {
@@ -31,6 +32,9 @@ export default createStore({
         },
         getCurrentDetails: (state) => {
             return state.currentDetails
+        },
+        getLungStatus: (state) => {
+            return state.lungStatus
         }
     },
     mutations: {
@@ -54,6 +58,9 @@ export default createStore({
         },
         changeCurrentDetails: (state, value) => {
             return state.currentDetails = value
+        },
+        changeLungStatus: (state,value)=> {
+            return state.lungStatus = value
         }
     },
     actions: {
