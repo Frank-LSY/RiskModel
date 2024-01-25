@@ -44,11 +44,121 @@ def insert_risk():
             print(item)
             risk = Risk(description=item['description'],
                         relatedRisk=item['relatedRisk'],
-                        prevalence=item['prevalence'],
                         category=item['category'],
                         bunch=item['bunch'], diseaseId=diseaseId
                         )
             db.session.add(risk)
+            db.session.commit()
+
+    return api_response(code=201, message='insert success')
+
+
+# 插入肝癌评分
+@app.route('/insertliver')
+def insert_liver():
+    from .model import LiverProb
+
+    with open('../data_sep/liver_score_prob.json', 'r', encoding='utf-8') as f:
+        risks = json.load(f)
+        for item in risks:
+            print(item)
+            liverprob = LiverProb(model=item['model'],
+                                  score=item['score'],
+                                  year=item['year'],
+                                  probability=item['probability'],
+                                  )
+            db.session.add(liverprob)
+            db.session.commit()
+
+    return api_response(code=201, message='insert success')
+
+
+# 插入假人数据
+@app.route('/poll_feature')
+def poll_feature():
+    from .model import Poll, PollFeature
+
+    with open('../data_sep/poll.json', 'r', encoding='utf-8') as f:
+        polls = json.load(f)
+        for item in polls:
+            print(item)
+            pollid = Poll.query.filter_by(
+                userId=item["userId"]).first().pollId
+            poll = PollFeature(
+                pollId=pollid,
+                age=item['age'],
+                sex=item['sex'],
+                smoking_status=item['smoking_status'],
+                smoking_yearly=item['smoking_yearly'],
+                smoking_daily=item['smoking_daily'],
+                bmi=item['bmi'],
+                lung_cancer_history=item['lung_cancer_history'],
+                personal_cancer_history=item['personal_cancer_history'],
+                AFP=item['AFP'],
+                MMEF=item['MMEF'],
+                CEA=item['CEA'],
+                CRP=item['CRP'],
+                drinking=item['drinking'],
+                exercise=item['exercise'],
+                diabetes=item['diabetes'],
+                AST=item['AST'],
+                ALT=item['ALT'],
+                HBV=item['HBV'],
+                HCV=item['HCV']
+
+            )
+            db.session.add(poll)
+            db.session.commit()
+
+    return api_response(code=201, message='insert success')
+
+
+# 插入心血管假数据
+@app.route('/card_features')
+def card_features():
+    from .model import Poll, CardFeature
+
+    with open('../data_sep/card.json', 'r', encoding='utf-8') as f:
+        polls = json.load(f)
+        for item in polls:
+            print(item)
+            pollid = Poll.query.filter_by(
+                userId=item["userId"]).first().pollId
+            poll = CardFeature(
+                pollId=pollid,
+                age=item['age'],
+                sex=item['sex'],
+                olive_oil=item['olive_oil'],
+                green_veges=item['green_veges'],
+                other_veges=item['other_veges'],
+                berries=item['berries'],
+                fruits=item['fruits'],
+                processed_meat=item['processed_meat'],
+                fish=item['fish'],
+                chicken=item['chicken'],
+                cheese=item['cheese'],
+                butter=item['butter'],
+                beans=item['beans'],
+                grains=item['grains'],
+                dessert=item['dessert'],
+                nuts=item['nuts'],
+                precooked_food=item['precooked_food'],
+                drinking=item['drinking'],
+                exercise=item['exercise'],
+                smoking_status=item['smoking_status'],
+                quit_year=item['quit_year'],
+                second_smoke=item['second_smoke'],
+                sleep=item['sleep'],
+                bmi=item['bmi'],
+                cholesterol=item['cholesterol'],
+                HDL=item['HDL'],
+                systolic_bp=item['systolic_bp'],
+                diastolic_bp=item['diastolic_bp'],
+                FBG=item['FBG'],
+                HbA1C=item['HbA1C']
+
+            )
+            db.session.add(poll)
             db.session.commit()
 
     return api_response(code=201, message='insert success')
@@ -149,7 +259,7 @@ def calc_lung():
             status=status,
             intensity=isSmoke,
             probability=probability,
-            score = score/2
+            score=score/2
         )
         db.session.add(LungDetailEntry)
         db.session.commit()
@@ -256,8 +366,8 @@ def get_user():
         serialized_users.append(serialized_user)
 
         return api_response(code=200, message='success', data=serialized_users)
-    else :
-        return api_response(code=404,message='该用户不在数据库中！',data=[])
+    else:
+        return api_response(code=404, message='该用户不在数据库中！', data=[])
 
 
 # 获取某用户的所有问卷
@@ -267,7 +377,7 @@ def get_polls():
 
     userId = request.args.get('userId')
     polls = Poll.query.filter_by(userId=userId).all()
-    if len(polls)>0:
+    if len(polls) > 0:
         serialized_polls = []
 
         for poll in polls:
@@ -280,8 +390,8 @@ def get_polls():
             serialized_polls.append(serialized_poll)
 
         return api_response(code=200, message='success', data=serialized_polls)
-    else :
-        return api_response(code=404,message='没有问卷！',data=[])
+    else:
+        return api_response(code=404, message='没有问卷！', data=[])
 
 
 # 获取某疾病的所有风险
@@ -399,3 +509,56 @@ def get_lung_details():
     }
 
     return api_response(code=200, message='success', data=[serialized_lung_detail])
+
+
+# 计算某问卷，心血管疾病分数
+@app.route('/card_score')
+def card_score():
+    from .model import CardFeature
+    from .calculator.card import card_score
+
+    pollId = request.args.get('pollId')             # 问卷id
+
+    cardPoll = CardFeature.query.filter_by(pollId=pollId).first()
+    serialized_card_poll = {
+        'pollId': pollId,
+        'age': cardPoll.age,
+        'sex': cardPoll.sex,
+        'olive_oil': cardPoll.olive_oil,
+        'green_veges': cardPoll.green_veges,
+        'other_veges': cardPoll.other_veges,
+        'berries': cardPoll.berries,
+        'fruits': cardPoll.fruits,
+        'processed_meat': cardPoll.processed_meat,
+        'fish': cardPoll.fish,
+        'chicken': cardPoll.chicken,
+        'cheese': cardPoll.cheese,
+        'butter': cardPoll.butter,
+        'beans': cardPoll.beans,
+        'grains': cardPoll.grains,
+        'dessert': cardPoll.dessert,
+        'nuts': cardPoll.nuts,
+        'precooked_food': cardPoll.precooked_food,
+        'drinking': cardPoll.drinking,
+        'exercise': cardPoll.exercise,
+        'smoking_status': cardPoll.smoking_status,
+        'quit_year': cardPoll.quit_year,
+        'second_smoke': cardPoll.second_smoke,
+        'sleep': cardPoll.sleep,
+        'bmi': cardPoll.bmi,
+        'cholesterol': cardPoll.cholesterol,
+        'HDL': cardPoll.HDL,
+        'systolic_bp': cardPoll.systolic_bp,
+        'diastolic_bp': cardPoll.diastolic_bp,
+        'FBG': cardPoll.FBG,
+        'HbA1C': cardPoll.HbA1C
+    }
+
+    mepa_score, physical_score, nichotine_score, sleep_score = card_score(
+        serialized_card_poll)
+    return api_response(code=200, message='success', data=[{
+        'mepa_score': mepa_score,
+        'physical_score': physical_score,
+        'nichotine_score': nichotine_score,
+        'sleep_score': sleep_score
+    }])

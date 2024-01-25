@@ -1,5 +1,12 @@
 [
     {
+        "description": "抽烟≥30包每年 (无论是否已戒烟)",
+        "relatedRisk": 3.0,
+        "prevalence": 0,
+        "category": "life",
+        "bunch": 1
+    },
+    {
         "description": "仍在抽烟, <15包每年",
         "relatedRisk": 1.0,
         "prevalence": 0,
@@ -56,6 +63,13 @@
         "bunch": 1
     },
     {
+        "description": "总体, 直系亲属有肺癌史",
+        "relatedRisk": 1.0,
+        "prevalence": 0,
+        "category": "family",
+        "bunch": 2
+    },
+    {
         "description": "不吸烟, 直系亲属有肺癌史",
         "relatedRisk": 1.0,
         "prevalence": 0,
@@ -68,6 +82,13 @@
         "prevalence": 0,
         "category": "family",
         "bunch": 2
+    },
+    {
+        "description": "总体, 年龄 <50岁",
+        "relatedRisk": -4,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 3
     },
     {
         "description": "不吸烟, 年龄 <50岁",
@@ -86,6 +107,13 @@
     {
         "description": "重度吸烟, 年龄 <50岁",
         "relatedRisk": -3,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 3
+    },
+    {
+        "description": "总体, 年龄 50-59岁",
+        "relatedRisk": 0,
         "prevalence": 0,
         "category": "history",
         "bunch": 3
@@ -112,6 +140,13 @@
         "bunch": 3
     },
     {
+        "description": "总体, 年龄 60-69岁",
+        "relatedRisk": 2,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 3
+    },
+    {
         "description": "不吸烟, 年龄 60-69岁",
         "relatedRisk": 2,
         "prevalence": 0,
@@ -128,6 +163,13 @@
     {
         "description": "重度吸烟, 年龄 60-69岁",
         "relatedRisk": 2,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 3
+    },
+    {
+        "description": "总体, 年龄 ≥70岁",
+        "relatedRisk": 3,
         "prevalence": 0,
         "category": "history",
         "bunch": 3
@@ -154,6 +196,13 @@
         "bunch": 3
     },
     {
+        "description": "总体, BMI<25",
+        "relatedRisk": 2,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 4
+    },
+    {
         "description": "不吸烟, BMI<25",
         "relatedRisk": 2,
         "prevalence": 0,
@@ -162,6 +211,13 @@
     },
     {
         "description": "重度吸烟, BMI<25",
+        "relatedRisk": 2,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "总体, BMI 25-29.9",
         "relatedRisk": 2,
         "prevalence": 0,
         "category": "history",
@@ -196,6 +252,13 @@
         "bunch": 5
     },
     {
+        "description": "总体, 甲胎蛋白(AFP) ≥ 1.8ng/ml",
+        "relatedRisk": 1,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 6
+    },
+    {
         "description": "不吸烟, 甲胎蛋白(AFP) ≥ 1.8ng/ml",
         "relatedRisk": 1,
         "prevalence": 0,
@@ -210,15 +273,15 @@
         "bunch": 6
     },
     {
-        "description": "不吸烟, 最大呼气中期流量(MMEF) < 48(ml/sec)",
+        "description": "总体, 最大呼气中期流量(MMEF) < 48(ml/sec)",
         "relatedRisk": 2,
         "prevalence": 0,
         "category": "history",
         "bunch": 7
     },
     {
-        "description": "不吸烟, 最大呼气中期流量(MMEF) 49-77(ml/sec)",
-        "relatedRisk": 1,
+        "description": "不吸烟, 最大呼气中期流量(MMEF) < 48(ml/sec)",
+        "relatedRisk": 2,
         "prevalence": 0,
         "category": "history",
         "bunch": 7
@@ -231,11 +294,54 @@
         "bunch": 7
     },
     {
+        "description": "总体, 最大呼气中期流量(MMEF) 49-103(ml/sec)",
+        "relatedRisk": 1,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "不吸烟, 最大呼气中期流量(MMEF) 49-77(ml/sec)",
+        "relatedRisk": 1,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 7
+    },
+
+    {
         "description": "重度吸烟, 最大呼气中期流量(MMEF) 49-103(ml/sec)",
         "relatedRisk": 1,
         "prevalence": 0,
         "category": "history",
         "bunch": 7
+    },
+    {
+        "description": "总体, 癌胚抗原(CEA) 1.5-2.5 (ng/ml)",
+        "relatedRisk": 1,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "总体, 癌胚抗原(CEA) 2.6-4.2 (ng/ml)",
+        "relatedRisk": 2,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "总体, 癌胚抗原(CEA) 4.3-7.0 (ng/ml)",
+        "relatedRisk": 3,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "总体, 癌胚抗原(CEA) >7.0 (ng/ml)",
+        "relatedRisk": 5,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 8
     },
     {
         "description": "不吸烟, 癌胚抗原(CEA) 1.5-2.5 (ng/ml)",
@@ -320,5 +426,12 @@
         "prevalence": 0,
         "category": "history",
         "bunch": 8
+    },
+    {
+        "description": "总体, C-反应蛋白(CRP) >10.0 (ng/ml)",
+        "relatedRisk": 1,
+        "prevalence": 0,
+        "category": "history",
+        "bunch": 9
     }
 ]

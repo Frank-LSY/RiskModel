@@ -1,0 +1,2139 @@
+[
+  {
+    "model": "1-1",
+    "score": -1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": -1,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 0,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 0,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 1,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 1,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 2,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 2,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 3,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 3,
+    "probability": 0.4,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 4,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 4,
+    "probability": 0.5,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 5,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 5,
+    "probability": 0.7,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 6,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 6,
+    "probability": 1.0,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 7,
+    "probability": 0.7,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 7,
+    "probability": 1.4,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 8,
+    "probability": 0.9,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 8,
+    "probability": 1.9,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 9,
+    "probability": 1.3,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 9,
+    "probability": 2.7,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 10,
+    "probability": 1.8,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 10,
+    "probability": 3.8,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 11,
+    "probability": 2.5,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 11,
+    "probability": 5.2,
+    "year": "ten"
+  },
+  {
+    "model": "1-1",
+    "score": 12,
+    "probability": 3.4,
+    "year": "five"
+  },
+  {
+    "model": "1-1",
+    "score": 12,
+    "probability": 7.2,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 2,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 4,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 6,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 6,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 7,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 7,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 8,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 8,
+    "probability": 1.5,
+    "year": "ten"
+  },
+
+  {
+    "model": "2-1",
+    "score": 11,
+    "probability": 0.4,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 11,
+    "probability": 0.9,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 13,
+    "probability": 0.8,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 13,
+    "probability": 1.6,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 15,
+    "probability": 1.3,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 15,
+    "probability": 2.9,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 19,
+    "probability": 2.4,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 19,
+    "probability": 5.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 21,
+    "probability": 4.2,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 21,
+    "probability": 9.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-1",
+    "score": 23,
+    "probability": 7.3,
+    "year": "five"
+  },
+  {
+    "model": "2-1",
+    "score": 23,
+    "probability": 15.5,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": -1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": -1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 2,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 3,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 3,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 4,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 5,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 5,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 6,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 6,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 7,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 7,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 8,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 8,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 9,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 9,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 10,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 10,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 11,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 11,
+    "probability": 0.6,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 12,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 12,
+    "probability": 0.6,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 13,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 13,
+    "probability": 1.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 14,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 14,
+    "probability": 1.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 15,
+    "probability": 0.9,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 15,
+    "probability": 2.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 16,
+    "probability": 0.9,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 16,
+    "probability": 2.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 17,
+    "probability": 1.7,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 17,
+    "probability": 4.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 18,
+    "probability": 1.7,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 18,
+    "probability": 4.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 19,
+    "probability": 3.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 19,
+    "probability": 7.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 20,
+    "probability": 3.1,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 20,
+    "probability": 7.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 21,
+    "probability": 5.6,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 21,
+    "probability": 13.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 22,
+    "probability": 5.6,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 22,
+    "probability": 13.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-1",
+    "score": 23,
+    "probability": 10.2,
+    "year": "five"
+  },
+  {
+    "model": "3-1",
+    "score": 23,
+    "probability": 22.8,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": -1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": -1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 2,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 3,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 3,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 4,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 5,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 5,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 6,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 6,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 7,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 7,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 8,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 8,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 9,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 9,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 10,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 10,
+    "probability": 0.4,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 11,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 11,
+    "probability": 0.5,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 12,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 12,
+    "probability": 0.7,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 13,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 13,
+    "probability": 0.9,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 14,
+    "probability": 0.7,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 14,
+    "probability": 1.3,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 15,
+    "probability": 0.9,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 15,
+    "probability": 1.8,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 16,
+    "probability": 1.3,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 16,
+    "probability": 2.4,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 17,
+    "probability": 1.7,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 17,
+    "probability": 3.4,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 18,
+    "probability": 2.4,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 18,
+    "probability": 5.2,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 19,
+    "probability": 3.3,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 19,
+    "probability": 6.5,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 20,
+    "probability": 5.4,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 20,
+    "probability": 10.8,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 21,
+    "probability": 6.3,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 21,
+    "probability": 12.2,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 22,
+    "probability": 10.5,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 22,
+    "probability": 18.7,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 23,
+    "probability": 11.7,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 23,
+    "probability": 22.1,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 24,
+    "probability": 19.3,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 24,
+    "probability": 35.0,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 25,
+    "probability": 21.4,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 25,
+    "probability": 38.2,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 26,
+    "probability": 32.4,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 26,
+    "probability": 56.2,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 27,
+    "probability": 37.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 27,
+    "probability": 60.4,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 28,
+    "probability": 45.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 28,
+    "probability": 75.4,
+    "year": "ten"
+  },
+  {
+    "model": "4-1",
+    "score": 29,
+    "probability": 59.0,
+    "year": "five"
+  },
+  {
+    "model": "4-1",
+    "score": 29,
+    "probability": 83.2,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": -1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": -1,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 0,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 0,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 1,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 1,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 2,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 2,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 3,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 3,
+    "probability": 0.5,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 4,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 4,
+    "probability": 0.7,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 5,
+    "probability": 0.4,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 5,
+    "probability": 1.0,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 6,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 6,
+    "probability": 1.4,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 7,
+    "probability": 0.8,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 7,
+    "probability": 2.0,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 8,
+    "probability": 1.1,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 8,
+    "probability": 3.0,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 9,
+    "probability": 1.6,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 9,
+    "probability": 4.3,
+    "year": "ten"
+  },
+  {
+    "model": "1-2",
+    "score": 10,
+    "probability": 2.3,
+    "year": "five"
+  },
+  {
+    "model": "1-2",
+    "score": 10,
+    "probability": 6.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 5,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 5,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 6,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 6,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 7,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 7,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 8,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 8,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 9,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 9,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 10,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 10,
+    "probability": 0.4,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 11,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 11,
+    "probability": 0.5,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 12,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 12,
+    "probability": 0.7,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 13,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 13,
+    "probability": 1.0,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 14,
+    "probability": 0.7,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 14,
+    "probability": 1.6,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 15,
+    "probability": 1.1,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 15,
+    "probability": 1.9,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 16,
+    "probability": 1.4,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 16,
+    "probability": 2.7,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 17,
+    "probability": 3.8,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 17,
+    "probability": 2.1,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 18,
+    "probability": 2.7,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 18,
+    "probability": 5.6,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 19,
+    "probability": 7.5,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 19,
+    "probability": 4.7,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 20,
+    "probability": 5.4,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 20,
+    "probability": 11.2,
+    "year": "ten"
+  },
+  {
+    "model": "2-2",
+    "score": 21,
+    "probability": 7.7,
+    "year": "five"
+  },
+  {
+    "model": "2-2",
+    "score": 21,
+    "probability": 14.4,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 5,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 5,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 6,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 6,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 7,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 7,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 8,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 8,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 9,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 9,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 10,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 10,
+    "probability": 0.4,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 11,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 11,
+    "probability": 0.6,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 12,
+    "probability": 0.4,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 12,
+    "probability": 0.8,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 13,
+    "probability": 0.6,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 13,
+    "probability": 1.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 14,
+    "probability": 0.8,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 14,
+    "probability": 1.8,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 15,
+    "probability": 1.4,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 15,
+    "probability": 2.3,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 16,
+    "probability": 1.7,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 16,
+    "probability": 3.3,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 17,
+    "probability": 2.7,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 17,
+    "probability": 4.5,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 18,
+    "probability": 3.2,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 18,
+    "probability": 6.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 19,
+    "probability": 4.7,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 19,
+    "probability": 8.7,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 20,
+    "probability": 6.3,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 20,
+    "probability": 13.2,
+    "year": "ten"
+  },
+  {
+    "model": "3-2",
+    "score": 21,
+    "probability": 9.3,
+    "year": "five"
+  },
+  {
+    "model": "3-2",
+    "score": 21,
+    "probability": 16.3,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 0,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 1,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 2,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 3,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 4,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 5,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 5,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 6,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 6,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 7,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 7,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 8,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 8,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 9,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 9,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 10,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 10,
+    "probability": 0.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 11,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 11,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 12,
+    "probability": 0.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 12,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 13,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 13,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 14,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 14,
+    "probability": 0.1,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 15,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 15,
+    "probability": 0.2,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 16,
+    "probability": 0.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 16,
+    "probability": 0.3,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 17,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 17,
+    "probability": 0.4,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 18,
+    "probability": 0.2,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 18,
+    "probability": 0.6,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 19,
+    "probability": 0.3,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 19,
+    "probability": 0.8,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 20,
+    "probability": 0.5,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 20,
+    "probability": 1.2,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 21,
+    "probability": 0.6,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 21,
+    "probability": 1.5,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 22,
+    "probability": 0.9,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 22,
+    "probability": 2.2,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 23,
+    "probability": 1.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 23,
+    "probability": 2.7,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 24,
+    "probability": 1.7,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 24,
+    "probability": 3.8,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 25,
+    "probability": 2.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 25,
+    "probability": 4.9,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 26,
+    "probability": 3.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 26,
+    "probability": 7.6,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 27,
+    "probability": 3.8,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 27,
+    "probability": 8.9,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 28,
+    "probability": 5.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 28,
+    "probability": 13.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 29,
+    "probability": 6.8,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 29,
+    "probability": 15.6,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 30,
+    "probability": 9.3,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 30,
+    "probability": 22.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 31,
+    "probability": 12.2,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 31,
+    "probability": 26.8,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 32,
+    "probability": 18.7,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 32,
+    "probability": 32.3,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 33,
+    "probability": 21.2,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 33,
+    "probability": 43.5,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 34,
+    "probability": 29.6,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 34,
+    "probability": 57.3,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 35,
+    "probability": 35.4,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 35,
+    "probability": 64.9,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 36,
+    "probability": 45.9,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 36,
+    "probability": 75.4,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 37,
+    "probability": 55.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 37,
+    "probability": 85.4,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 38,
+    "probability": 66.1,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 38,
+    "probability": 92.0,
+    "year": "ten"
+  },
+  {
+    "model": "5-2",
+    "score": 39,
+    "probability": 77.0,
+    "year": "five"
+  },
+  {
+    "model": "5-2",
+    "score": 39,
+    "probability": 97.1,
+    "year": "ten"
+  }
+]
