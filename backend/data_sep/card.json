@@ -27,10 +27,12 @@
     "bmi": 28.7,
     "cholesterol": 4.8,
     "HDL": 1.2,
+    "lipid_drug":"no",
     "systolic_bp": 128,
     "diastolic_bp": 87,
     "FBG": 4.6,
-    "HbA1C": 5.0
+    "HbA1C": 5.0,
+    "diabetes":"insulin"
   },
   {
     "userId": "2",
@@ -60,10 +62,12 @@
     "bmi": 24.7,
     "cholesterol": 5.1,
     "HDL": 1.0,
+    "lipid_drug":"no",
     "systolic_bp": 119,
     "diastolic_bp": 77,
     "FBG": 4.6,
-    "HbA1C": 5.0
+    "HbA1C": 5.0,
+    "diabetes":"no"
   },
   {
     "userId": "3",
@@ -93,9 +97,11 @@
     "bmi": 27.7,
     "cholesterol": 5.4,
     "HDL": 1.0,
+    "lipid_drug":"no",
     "systolic_bp": 134,
     "diastolic_bp": 90,
     "FBG": 5.0,
-    "HbA1C": 4.3
+    "HbA1C": 4.3,
+    "diabetes":"diet"
   }
 ]

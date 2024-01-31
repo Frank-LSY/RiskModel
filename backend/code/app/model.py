@@ -85,10 +85,13 @@ class CardFeature(db.Model):
     bmi = db.Column(db.Float)
     cholesterol = db.Column(db.Float)
     HDL = db.Column(db.Float)
+    lipid_drug = db.Column(db.Enum('yes', 'no'))
     systolic_bp = db.Column(db.Integer)
     diastolic_bp = db.Column(db.Integer)
+    bp_drug = db.Column(db.Enum('yes', 'no'))
     FBG = db.Column(db.Float)
     HbA1C = db.Column(db.Float)
+    diabetes = db.Column(db.Enum('no','diet','tablet','insulin'))
 
 
 # 疾病表

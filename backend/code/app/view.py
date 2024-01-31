@@ -548,17 +548,26 @@ def card_score():
         'bmi': cardPoll.bmi,
         'cholesterol': cardPoll.cholesterol,
         'HDL': cardPoll.HDL,
+        'lipid_drug': cardPoll.lipid_drug,
         'systolic_bp': cardPoll.systolic_bp,
         'diastolic_bp': cardPoll.diastolic_bp,
+        'bp_drug': cardPoll.bp_drug,
         'FBG': cardPoll.FBG,
-        'HbA1C': cardPoll.HbA1C
+        'HbA1C': cardPoll.HbA1C,
+        'diabetes': cardPoll.diabetes
     }
 
-    mepa_score, physical_score, nichotine_score, sleep_score = card_score(
+    mepa_score, physical_score, nichotine_score, sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score, avg_score = card_score(
         serialized_card_poll)
     return api_response(code=200, message='success', data=[{
+        'ori_data': serialized_card_poll,
         'mepa_score': mepa_score,
         'physical_score': physical_score,
         'nichotine_score': nichotine_score,
-        'sleep_score': sleep_score
+        'sleep_score': sleep_score,
+        'bmi_score': bmi_score,
+        'cholesterol_score': cholesterol_score,
+        'glucose_score': glucose_score,
+        'bp_score': bp_score,
+        'avg_score': avg_score
     }])
