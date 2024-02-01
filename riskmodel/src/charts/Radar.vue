@@ -6,12 +6,23 @@
 import { ref, onMounted } from "vue";
 import * as echarts from "echarts";
 
+const props = defineProps({
+  bmi_score: Number,
+  bp_score: Number,
+  cholesterol_score: Number,
+  glucose_score: Number,
+  mepa_score: Number,
+  nichotine_score: Number,
+  physical_score: Number,
+  sleep_score: Number,
+});
+
 var chartDom;
 var myChart;
 var option = {
   color: ["#e5e7eb", "#fde68a", "#fcd34d", "#f59e0b"],
   title: {
-    text: "疾病风险因素",
+    text: "各分项得分",
     left: "8.333333%",
   },
   tooltip: {
@@ -20,12 +31,14 @@ var option = {
   radar: [
     {
       indicator: [
-        { text: "生活习惯", max: 100 },
-        { text: "职业暴露", max: 100 },
-        { text: "家族遗传", max: 100 },
-        { text: "饮食习惯", max: 100 },
-        { text: "个人病史", max: 100 },
-        { text: "药物使用", max: 100 },
+        { text: "体重指数", max: 105 },
+        { text: "血压", max: 105 },
+        { text: "血脂", max: 105 },
+        { text: "血糖", max: 105 },
+        { text: "饮食", max: 105 },
+        { text: "吸烟", max: 105 },
+        { text: "运动", max: 105 },
+        { text: "睡眠", max: 105 },
       ],
       center: ["50%", "50%"],
 
@@ -37,12 +50,13 @@ var option = {
         color: "#6b7280",
         fontWeight: "bold",
         fontSize: 16,
+        
       },
       splitArea: {
         areaStyle: {
-          color: ["#fef3c7", "#fde68a", "#fcd34d", "#f59e0b"],
-
-          shadowBlur: 5,
+          color: ["#fb7185", "#fb923c", "#fde68a", "#a7f3d0"],
+          opacity: 0.9,
+          shadowBlur: 3,
         },
       },
       axisLine: {
@@ -67,10 +81,19 @@ var option = {
       },
       data: [
         {
-          value: [90, 60, 20, 10, 55, 15],
-          name: "风险因素",
+          value: [
+            props.bmi_score,
+            props.bp_score,
+            props.cholesterol_score,
+            props.glucose_score,
+            props.mepa_score,
+            props.nichotine_score,
+            props.physical_score,
+            props.sleep_score,
+          ],
           areaStyle: {
             color: "rgba(161, 161, 133, 0.8)",
+            opacity: 0.9
           },
         },
       ],

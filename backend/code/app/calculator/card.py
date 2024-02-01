@@ -114,7 +114,7 @@ def calc_sleep_score(sleep):
     elif sleep >= 6:
         sleep_score = 70
     elif sleep >= 5:
-        sleep = 100
+        sleep = 40
     elif sleep >= 4:
         sleep_score = 20
     else:
@@ -142,9 +142,8 @@ def calc_bmi_score(bmi):
 def convert_cholesterol(cholesterol):
     return cholesterol*0.02586
 
+
 # 计算血脂分数
-
-
 def calc_lipids_score(cholesterol, lipid_drug):
     if cholesterol > 70:
         cholesterol = convert_cholesterol(cholesterol)

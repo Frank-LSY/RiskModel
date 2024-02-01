@@ -13,5 +13,8 @@ export default {
     pollRisks: query => get('/ydr/poll_risks', query),
 
     // 获取某问卷，肺癌，细节
-    lungDetails: query => (get('/ydr/lung_details', query))
+    lungDetails: query => (get('/ydr/lung_details', query)),
+
+    // 获取某问卷，心血管，细节
+    cardDetails: query => (get('/ydr/card_score', query))
 }

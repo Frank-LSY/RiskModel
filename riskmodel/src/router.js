@@ -43,6 +43,16 @@ const routes = [
                     index: 3
                 },
             },
+            {
+                path: '/cardiovascular',
+                component: () => import('@components/Cardiovascular.vue'),
+                name: '报告记录',
+                meta: {
+                    isLogin: false,
+                    title: '疾病风险全因素分析-报告记录',
+                    index: 3
+                },
+            },
         ]
     },
         {

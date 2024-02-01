@@ -340,8 +340,6 @@ def get_users():
         serialized_user = {
             'userId': user.userId,
             'userName': user.userName,
-            'age': user.age,
-            'sex': user.sex
         }
         serialized_users.append(serialized_user)
 
@@ -360,8 +358,6 @@ def get_user():
         serialized_user = {
             'userId': user.userId,
             'userName': user.userName,
-            'age': user.age,
-            'sex': user.sex
         }
         serialized_users.append(serialized_user)
 
@@ -518,7 +514,7 @@ def card_score():
     from .calculator.card import card_score
 
     pollId = request.args.get('pollId')             # 问卷id
-
+    print('from web: ', pollId)
     cardPoll = CardFeature.query.filter_by(pollId=pollId).first()
     serialized_card_poll = {
         'pollId': pollId,

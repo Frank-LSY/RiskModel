@@ -116,7 +116,7 @@ const getPollDetail = (pollid) => {
     store.commit("changeCurrentPoll", res.data);
     store.commit("changeCurrentPollId", pollid);
     store.commit("changeLoginStatus", true);
-    router.push("history");
+    router.push("cardiovascular");
   });
 };
 
