@@ -553,10 +553,11 @@ def card_score():
         'diabetes': cardPoll.diabetes
     }
 
-    mepa_score, physical_score, nichotine_score, sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score, avg_score = card_score(
+    diet_score, mepa_score, physical_score, nichotine_score, sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score, avg_score = card_score(
         serialized_card_poll)
     return api_response(code=200, message='success', data=[{
         'ori_data': serialized_card_poll,
+        'diet_score': diet_score,
         'mepa_score': mepa_score,
         'physical_score': physical_score,
         'nichotine_score': nichotine_score,

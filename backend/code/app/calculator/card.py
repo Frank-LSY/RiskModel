@@ -50,7 +50,7 @@ def calc_diet_score(sex, olive_oil, green_veges, other_veges,
         mepa_score = 25
     else:
         mepa_score = 0
-    return mepa_score
+    return diet_score, mepa_score
 
 
 # 计算锻炼分数
@@ -221,7 +221,7 @@ def calc_bp_score(systolic_bp, diastolic_bp, bp_drug):
 # 计算心血管分数
 def card_score(card_feature):
     print(card_feature)
-    mepa_score = calc_diet_score(sex=card_feature['sex'],
+    diet_score, mepa_score = calc_diet_score(sex=card_feature['sex'],
                                  olive_oil=card_feature['olive_oil'],
                                  green_veges=card_feature['green_veges'],
                                  other_veges=card_feature['other_veges'],
@@ -256,4 +256,4 @@ def card_score(card_feature):
     print(mepa_score, physical_score, nichotine_score,
           sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score)
 
-    return mepa_score, physical_score, nichotine_score, sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score, avg_score
+    return diet_score, mepa_score, physical_score, nichotine_score, sleep_score, bmi_score, cholesterol_score, glucose_score, bp_score, avg_score
