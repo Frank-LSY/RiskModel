@@ -2,7 +2,7 @@
   <div class="w-full h-soixantecinq">
     <div id="radar-over" class="h-trente w-full relative shadow-lg rounded"></div>
     <div class="h-cinq w-full"></div>
-    <div id="radar-within" class="h-trente w-full relative"></div>
+    <div id="radar-within" class="h-trente w-full relative shadow-lg rounded""></div>
   </div>
 </template>
 
