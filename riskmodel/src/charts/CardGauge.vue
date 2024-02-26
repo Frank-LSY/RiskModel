@@ -4,7 +4,7 @@
       您的心血管总体评分为:
     </div>
     <div class="absolute left-1/12 bottom-1/24 font-semibold text-gray-700">
-      依据模型，您的无疾病年约为:
+      依据模型推算，您的无疾病年约为:
     </div>
     <div
       id="card-gauge"

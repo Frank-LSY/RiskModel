@@ -20,25 +20,28 @@ const props = defineProps({
 var chartDom;
 var myChart;
 var option = {
-  color: ["#e5e7eb", "#fde68a", "#fcd34d", "#f59e0b"],
-  title: {
-    text: "各分项得分",
-    left: "8.333333%",
-  },
+  color: ["#0284c7"],
+  // title: {
+  //   text: "各分项得分",
+  //   left: "8.333333%",
+  //   textStyle: {
+      
+  //   }
+  // },
   tooltip: {
     trigger: "item",
   },
   radar: [
     {
       indicator: [
-        { text: "体重指数", max: 105 },
-        { text: "血压", max: 105 },
-        { text: "血脂", max: 105 },
-        { text: "血糖", max: 105 },
-        { text: "饮食", max: 105 },
-        { text: "吸烟", max: 105 },
-        { text: "运动", max: 105 },
-        { text: "睡眠", max: 105 },
+        { text: "体重指数", max: 100 },
+        { text: "血压", max: 100 },
+        { text: "血脂", max: 100 },
+        { text: "血糖", max: 100 },
+        { text: "饮食", max: 100 },
+        { text: "吸烟", max: 100 },
+        { text: "运动", max: 100 },
+        { text: "睡眠", max: 100 },
       ],
       center: ["50%", "50%"],
 
@@ -92,8 +95,8 @@ var option = {
             props.sleep_score,
           ],
           areaStyle: {
-            color: "rgba(161, 161, 133, 0.8)",
-            opacity: 0.9
+            color: "#bae6fd",
+            opacity: 0.7
           },
         },
       ],

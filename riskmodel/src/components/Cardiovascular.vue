@@ -32,8 +32,9 @@
     </div>
     <div class="h-deux w-full"></div>
     <div
-      class="w-5/6 sm:w-2/3 z-30 overflow-auto relative bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg"
+      class="w-5/6 sm:w-2/3 z-30 overflow-auto relative bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-end"
     >
+      <div class="text-gray-600 font-semibold w-11/12 my-0.5">各分项得分:</div>
       <Radar
         :bmi_score="bmi_score"
         :bp_score="bp_score"
@@ -177,6 +178,11 @@
             是否使用降压药: {{ ori_data.bp_drug === "yes" ? "是" : "否" }}
           </div>
         </div>
+      </div>
+      <div class="w-full flex flex-wrap justify-end">
+        <div class="font-semibold text-gray-700 my-1 w-11/12">
+          您的饮食详情:
+        </div>
         <diet-radar
           :olive_oil="ori_data.olive_oil"
           :green_veges="ori_data.green_veges"
@@ -195,6 +201,8 @@
           :precooked_food="ori_data.precooked_food"
           :drinking="ori_data.drinking"
         ></diet-radar>
+      </div>
+      <div class="w-5/6">
         <!-- 睡眠色条 -->
         <div
           class="grid grid-cols-7 w-full mt-1 text-gray-600 font-semibold relative"
@@ -525,8 +533,8 @@ const visSleep = () => {
 
 const visExercise = () => {
   var position = {};
-  //   var exercise = ori_data.value.exercise;
-  var exercise = 150;
+  var exercise = ori_data.value.exercise;
+  // var exercise = 150;
   if (exercise > 290) {
     position = "97%";
   } else if (exercise > 0) {
