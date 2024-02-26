@@ -28,7 +28,18 @@
     <div
       class="w-5/6 sm:w-2/3 z-30 overflow-auto relative bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg"
     >
-      <card-gauge :score="avg_score" v-if="showDemo"></card-gauge>
+      <card-gauge
+        :score="avg_score"
+        :bmi_score="bmi_score"
+        :bp_score="bp_score"
+        :cholesterol_score="cholesterol_score"
+        :glucose_score="glucose_score"
+        :mepa_score="mepa_score"
+        :nichotine_score="nichotine_score"
+        :physical_score="physical_score"
+        :sleep_score="sleep_score"
+        v-if="showDemo"
+      ></card-gauge>
     </div>
     <div class="h-deux w-full"></div>
     <div

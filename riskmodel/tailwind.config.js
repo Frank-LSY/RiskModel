@@ -521,6 +521,7 @@ module.exports = {
         screen: '100vh',
         deux: '2vh',
         trois: '3vh',
+        quatre:'4vh',
         cinq: '5vh',
         huit: '8vh',
         dix: '10vh',

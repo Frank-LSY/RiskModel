@@ -3,13 +3,143 @@
     <div class="absolute left-1/12 top-1/24 font-semibold text-gray-700">
       您的心血管总体评分为:
     </div>
-    <div class="absolute left-1/12 bottom-1/24 font-semibold text-gray-700">
+    <!-- <div class="absolute left-1/12 bottom-1/24 font-semibold text-gray-700">
       依据模型推算，您的无疾病年约为:
-    </div>
+    </div> -->
     <div
       id="card-gauge"
       class="h-trente w-full relative shadow-lg rounded"
     ></div>
+    <div class="w-full flex flex-wrap justify-evenly">
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-meal"
+          class="fill-gray-700 w-6 h-6 bg-lime-500 rounded-full ring-2 ring-lime-500 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">健康饮食</div>
+        <SvgIcon
+          :iconName="mepa_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            mepa_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-exercise"
+          class="fill-gray-700 w-6 h-6 bg-cyan-400 rounded-full ring-2 ring-cyan-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">适量运动</div>
+        <SvgIcon
+          :iconName="physical_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            physical_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-smoke"
+          class="fill-gray-700 w-6 h-6 bg-rose-400 rounded-full ring-2 ring-rose-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">不要吸烟</div>
+        <SvgIcon
+          :iconName="nichotine_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            nichotine_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-sleep"
+          class="fill-gray-700 w-6 h-6 bg-teal-300 rounded-full ring-2 ring-teal-300 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">充足睡眠</div>
+        <SvgIcon
+          :iconName="sleep_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            sleep_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-tizhong"
+          class="fill-gray-700 w-6 h-6 bg-orange-400 rounded-full ring-2 ring-orange-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">控制体重</div>
+        <SvgIcon
+          :iconName="bmi_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            bmi_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-fat"
+          class="fill-gray-700 w-6 h-6 bg-fuchsia-400 rounded-full ring-2 ring-fuchsia-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">控制血脂</div>
+        <SvgIcon
+          :iconName="cholesterol_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            cholesterol_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-sugar"
+          class="fill-gray-700 w-6 h-6 bg-teal-400 rounded-full ring-2 ring-teal-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">控制血糖</div>
+        <SvgIcon
+          :iconName="glucose_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            glucose_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+      <div
+        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
+      >
+        <SvgIcon
+          iconName="icon-xieyaji-F"
+          class="fill-gray-700 w-6 h-6 bg-indigo-400 rounded-full ring-2 ring-indigo-400 ring-offset-2"
+        ></SvgIcon>
+        <div class="font-semibold text-gray-700">控制血压</div>
+        <SvgIcon
+          :iconName="bp_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
+          :class="[
+            bp_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
+            'w-6 h-6',
+          ]"
+        ></SvgIcon>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -19,6 +149,14 @@ import * as echarts from "echarts";
 
 const props = defineProps({
   score: Number,
+  bmi_score: Number,
+  bp_score: Number,
+  cholesterol_score: Number,
+  glucose_score: Number,
+  mepa_score: Number,
+  nichotine_score: Number,
+  physical_score: Number,
+  sleep_score: Number,
 });
 
 const state2Color = {
@@ -34,17 +172,12 @@ const state2Color = {
 var chartDom;
 var myChart;
 var option = {
-  grid: {
-    left: "200%",
-    right: "0%",
-    bottom: "2%",
-  },
   series: [
     {
       type: "gauge",
       startAngle: 180,
       endAngle: 0,
-      center: ["50%", "75%"],
+      center: ["50%", "90%"],
       radius: "100%",
       min: 0,
       max: 100,
