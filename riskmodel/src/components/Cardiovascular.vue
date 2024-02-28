@@ -13,7 +13,8 @@
     >
       <div class="w-2/3">姓名: {{ store.getters.getCurrentUser.userName }}</div>
       <div class="w-2/3">
-        性别: {{ sex === "male" ? "男性" : sex === "female" ? "女性" : "未知" }}
+        性别:
+        {{ sex === "male" ? "男性" : sex === "female" ? "女性" : "未知" }}
       </div>
       <div class="w-2/3">年龄: {{ age }}</div>
     </div>
@@ -428,6 +429,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -463,7 +465,7 @@ const sleep_score = ref(0);
 const ori_data = ref({});
 
 onMounted(() => {
-  console.log(store.getters.getCurrentPollId);
+  // console.log(store.getters.getCurrentPollId);
   API.cardDetails({
     pollId: store.getters.getCurrentPollId,
   })
@@ -485,6 +487,7 @@ onMounted(() => {
       ori_data.value = res.data[0].ori_data;
     })
     .catch((err) => {
+      router.push("query");
       errorMessage(err);
     });
 });

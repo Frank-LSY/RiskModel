@@ -2,8 +2,10 @@
 
 import axios from 'axios'
 import qs from 'qs'
-
+import { useRouter } from "vue-router";
 import { infoMessage, errorMessage } from './common'
+
+const router = useRouter()
 //响应拦截器
 axios.interceptors.response.use(
     function (response) {
@@ -46,9 +48,11 @@ const request = function (query) {
                 if (res.data.code === 200) { //如果后端说请求正确，直接返回
                     return Promise.resolve(res.data)
                 } else if (res.data.code === 404) { //如果后端觉得权限不足
+                    router.push('query')
                     return Promise.reject(res.data)
                 } else { //其他全给拒掉
-                    console.log(res)
+                    // console.log(res)
+                    router.push('query')
                     return Promise.reject(res.data)
                 }
             }

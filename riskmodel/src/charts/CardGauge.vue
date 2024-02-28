@@ -11,134 +11,66 @@
       class="h-trente w-full relative shadow-lg rounded"
     ></div>
     <div class="w-full flex flex-wrap justify-evenly">
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-meal"
-          class="fill-gray-700 w-6 h-6 bg-lime-500 rounded-full ring-2 ring-lime-500 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">健康饮食</div>
-        <SvgIcon
-          :iconName="mepa_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            mepa_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
+      <div class="w-5/6 mt-2 text-center font-semibold text-gray-700">
+        心血管健康八要素
       </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-exercise"
-          class="fill-gray-700 w-6 h-6 bg-cyan-400 rounded-full ring-2 ring-cyan-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">适量运动</div>
-        <SvgIcon
-          :iconName="physical_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            physical_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-smoke"
-          class="fill-gray-700 w-6 h-6 bg-rose-400 rounded-full ring-2 ring-rose-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">不要吸烟</div>
-        <SvgIcon
-          :iconName="nichotine_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            nichotine_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-sleep"
-          class="fill-gray-700 w-6 h-6 bg-teal-300 rounded-full ring-2 ring-teal-300 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">充足睡眠</div>
-        <SvgIcon
-          :iconName="sleep_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            sleep_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-tizhong"
-          class="fill-gray-700 w-6 h-6 bg-orange-400 rounded-full ring-2 ring-orange-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">控制体重</div>
-        <SvgIcon
-          :iconName="bmi_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            bmi_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-fat"
-          class="fill-gray-700 w-6 h-6 bg-fuchsia-400 rounded-full ring-2 ring-fuchsia-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">控制血脂</div>
-        <SvgIcon
-          :iconName="cholesterol_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            cholesterol_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-sugar"
-          class="fill-gray-700 w-6 h-6 bg-teal-400 rounded-full ring-2 ring-teal-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">控制血糖</div>
-        <SvgIcon
-          :iconName="glucose_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            glucose_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
-      <div
-        class="w-2/3 sm:w-2/5 h-quatre flex flex-wrap justify-evenly place-content-center shadow-lg rounded-xl my-2 bg-gray-400 bg-opacity-40"
-      >
-        <SvgIcon
-          iconName="icon-xieyaji-F"
-          class="fill-gray-700 w-6 h-6 bg-indigo-400 rounded-full ring-2 ring-indigo-400 ring-offset-2"
-        ></SvgIcon>
-        <div class="font-semibold text-gray-700">控制血压</div>
-        <SvgIcon
-          :iconName="bp_score === 100 ? 'icon-zhengque' : 'icon-cuowu'"
-          :class="[
-            bp_score === 100 ? 'fill-emerald-400' : 'fill-rose-500',
-            'w-6 h-6',
-          ]"
-        ></SvgIcon>
-      </div>
+      <!-- 吃 -->
+      <card-eight
+        iconName="icon-meal"
+        name="健康饮食"
+        :score="mepa_score"
+        bg="bg-lime-500"
+        ring="ring-lime-500"
+      ></card-eight>
+      <card-eight
+        iconName="icon-exercise"
+        name="适量运动"
+        :score="physical_score"
+        bg="bg-cyan-400"
+        ring="ring-cyan-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-smoke"
+        name="不要吸烟"
+        :score="nichotine_score"
+        bg="bg-rose-400"
+        ring="ring-rose-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-sleep"
+        name="充足睡眠"
+        :score="sleep_score"
+        bg="bg-green-400"
+        ring="ring-green-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-tizhong"
+        name="控制体重"
+        :score="bmi_score"
+        bg="bg-orange-400"
+        ring="ring-orange-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-fat"
+        name="控制血脂"
+        :score="cholesterol_score"
+        bg="bg-fuchsia-400"
+        ring="ring-fuchsia-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-sugar"
+        name="控制血糖"
+        :score="glucose_score"
+        bg="bg-teal-400"
+        ring="ring-teal-400"
+      ></card-eight>
+      <card-eight
+        iconName="icon-xieyaji-F"
+        name="控制血压"
+        :score="bp_score"
+        bg="bg-indigo-400"
+        ring="ring-indigo-400"
+      ></card-eight>
     </div>
   </div>
 </template>
@@ -146,6 +78,8 @@
 <script setup>
 import { ref, onMounted, watch, onBeforeUnmount } from "vue";
 import * as echarts from "echarts";
+import CardEight from "@/components/CardEight.vue";
+
 
 const props = defineProps({
   score: Number,

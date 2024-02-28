@@ -37,7 +37,7 @@
     >
       <div>基于大数据的疾病风险因素分析</div>
     </div>
-    <div>
+    <div class="relative">
       <router-view
         v-slot="{ Component }"
         id="main"
@@ -50,19 +50,52 @@
           </transition>
         </keep-alive>
       </router-view>
+      <div
+        class="absolute top-0 bg-gray-700 bg-opacity-60 w-full h-quatrevintdeux z-50 flex flex-wrap justify-center content-center animatecss animatecss-fadeIn"
+        v-if="showEightDetail"
+      >
+        <div
+          class="w-4/5 h-soixante bg-gray-100 bg-opacity-80 rounded-lg shadow-lg shadow-gray-700 relative"
+        >
+          <svg-icon
+            iconName="icon-cuowu"
+            className="absolute h-4 w-4 top-2 right-2 ring-2 rounded-full ring-offset-1 ring-rose-700 fill-gray-700 cursor-pointer"
+            @click="closeDialog()"
+          ></svg-icon>
+          <eight-detail
+            :iconName="store.getters.getDescriptionDialog.iconName"
+            :name="store.getters.getDescriptionDialog.name"
+            :bg="store.getters.getDescriptionDialog.bg"
+            :ring="store.getters.getDescriptionDialog.ring"
+          ></eight-detail>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { onBeforeRouteUpdate } from "vue-router";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useStore } from "vuex";
+import EightDetail from "./components/EightDetail.vue";
+import SvgIcon from "./components/SvgIcon.vue";
 
 // import { successMessage,errorMessage } from "./assets/js/common";
 
 const store = useStore();
 const transitionName = ref("slide-up");
+
+const showEightDetail = ref(false);
+watch(
+  () => store.getters.getDescriptionDialog.show,
+  () => {
+    showEightDetail.value = store.getters.getDescriptionDialog.show;
+  }
+);
+const closeDialog = () => {
+  store.commit("changeDescriptionDialog", { show: false });
+};
 
 onBeforeRouteUpdate((to, from) => {
   if (to.meta.index > from.meta.index) {
