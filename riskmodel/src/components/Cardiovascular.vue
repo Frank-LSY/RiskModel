@@ -6,6 +6,12 @@
     >
       返回
     </button>
+    <button
+      class="w-5/6 sm:w-2/3 px-1 rounded border-2 border-gray-700 bg-gray-100 bg-opacity-70 shadow-lg hover:shadow-xl hover:shadow-stone-400 shadow-stone-200 z-50 font-semibold text-gray-700"
+      @click="genReport"
+    >
+      生成报告
+    </button>
     <div class="h-deux w-full"></div>
     <div
       class="w-5/6 sm:w-2/3 z-30 overflow-auto text-gray-600 font-semibold h-douze bg-gray-100 bg-opacity-70 shadow-lg shadow-stone-200 focus:shadow-stone-700 rounded-lg flex flex-wrap justify-center content-evenly text-center"
@@ -429,14 +435,18 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script setup>
 import { ref, onMounted, renderSlot } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
-import { errorMessage, infoMessage, warningMessage } from "@/assets/js/common";
+import {
+  errorMessage,
+  infoMessage,
+  successMessage,
+  warningMessage,
+} from "@/assets/js/common";
 import CardGauge from "@charts/CardGauge.vue";
 import Radar from "@charts/Radar.vue";
 import DietRadar from "@charts/DietRadar.vue";
@@ -447,6 +457,26 @@ const store = useStore();
 
 const goBack = () => {
   router.push("query");
+};
+
+const genReport = () => {
+  console.log("生成报告!");
+  API.genReport()
+    .then((res) => {
+      console.log(res);
+      successMessage("生成报告成功!");
+      API.getReport({ filename: res.data })
+        .then((result) => {
+          console.log(result);
+        })
+        .catch((error) => {
+          console.log(error);
+          //返回地址
+        });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
 const showDemo = ref(false);

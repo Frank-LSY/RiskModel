@@ -240,7 +240,7 @@
       <div class="font-semibold text-gray-700 py-1">改善高血压</div>
       <div class="text-gray-600 py-1 text-sm">
         高血压是可以控制的。无论您的血压是高还是正常（正常是指收缩压小于 120
-        毫米汞柱，舒张压小于 80 毫米汞柱或小于
+        mmHg，舒张压小于 80 mmHg或小于
         120/80）。为了心血管的健康，我们需要调整生活方式，以下是您可以采取的措施：食用有益心脏健康的低钠饮食；定期参加体育锻炼；保持健康的体重；限制饮酒和避免吸烟。
       </div>
       <div class="font-semibold text-gray-700 py-1">血压与健康</div>

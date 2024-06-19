@@ -75,7 +75,6 @@ const showHistory = () => {
     showPS.value = false;
 
     getUser();
-    getPoll();
   }
 };
 
@@ -90,23 +89,27 @@ const reportList = ref([]);
 const getUser = () => {
   API.user({
     userId: personid.value,
-  }).then((res) => {
-    store.commit("changeCurrentUser", res.data[0]);
-    showList.value = true;
-  }).catch((err)=>
-  {
-    infoMessage(err)
-  });
+  })
+    .then((res) => {
+      store.commit("changeCurrentUser", res.data[0]);
+      showList.value = true;
+      getPoll()
+    })
+    .catch((err) => {
+      infoMessage(err);
+    });
 };
 
 const getPoll = () => {
   API.userPolls({
     userId: personid.value,
-  }).then((res) => {
-    reportList.value = res.data;
-  }).catch((err)=>{
-    infoMessage(err)
-  });
+  })
+    .then((res) => {
+      reportList.value = res.data;
+    })
+    .catch((err) => {
+      infoMessage(err);
+    });
 };
 
 const getPollDetail = (pollid) => {

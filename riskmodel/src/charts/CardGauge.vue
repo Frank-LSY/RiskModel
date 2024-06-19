@@ -192,7 +192,8 @@ var option = {
         fontSize: 40,
         offsetCenter: [0, "-15%"],
         valueAnimation: true,
-        color: state2Color[Math.ceil(props.score / 14.3)],
+        color: '#374151',
+        // color: state2Color[Math.ceil(props.score / 14.3)],
         formatter: function (value) {
           return Math.round(value) + "分";
         },

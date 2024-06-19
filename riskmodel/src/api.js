@@ -16,5 +16,10 @@ export default {
     lungDetails: query => (get('/ydr/lung_details', query)),
 
     // 获取某问卷，心血管，细节
-    cardDetails: query => (get('/ydr/card_score', query))
+    cardDetails: query => (get('/ydr/card_score', query)),
+
+    // 生成报告
+    genReport: query => (get('/ydr/gen_report', query)),
+    // 获取报告
+    getReport: query => (get('/ydr/pdf', query)),
 }

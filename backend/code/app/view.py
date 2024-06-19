@@ -1,11 +1,13 @@
 # views.py
 
-from flask import jsonify, request
+from flask import jsonify, request, send_from_directory, Response
 from .model import db
+from .utils.ADReport import ADReportGenerator
 from config import Config
 from sqlalchemy import func
 import random
 import json
+import os
 
 
 def create_app():
@@ -568,3 +570,30 @@ def card_score():
         'bp_score': bp_score,
         'avg_score': avg_score
     }])
+
+
+# 生成pdf报告
+@app.route('/gen_report')
+def gen_report():
+    # 实例化类
+    report_generator = ADReportGenerator()
+    # 生成报告
+    pdf_file_path = report_generator.generate_report(
+        "AD筛查报告.pdf", "C:/Users/DELL/Desktop/RiskModel/backend/code/app/utils")
+
+    return api_response(code=200, message='success', data='AD筛查报告.pdf')
+
+
+DIRECTORY_PATH = 'C:/Users/DELL/Desktop/RiskModel/backend/pdf'
+# pdf文件挂载器
+
+
+@app.route('/pdf', methods=['GET'])
+def pdf():
+    filename = request.args.get('filename')
+    return api_response(code=200, message='success', data=Response(filename, mimetype='application/pdf', headers={'Content-Disposition': 'attachment;filename=example.pdf'}))
+    """下载文件的URL"""
+    filename = request.args.get('filename')
+    if filename in os.listdir(DIRECTORY_PATH):  # 如果需求下载文件存在
+        # 发送文件 参数：文件夹路径，文件路径，文件名
+        return send_from_directory(DIRECTORY_PATH, filename)

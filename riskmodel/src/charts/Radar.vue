@@ -25,7 +25,7 @@ var option = {
   //   text: "各分项得分",
   //   left: "8.333333%",
   //   textStyle: {
-      
+
   //   }
   // },
   tooltip: {
@@ -53,7 +53,6 @@ var option = {
         color: "#6b7280",
         fontWeight: "bold",
         fontSize: 16,
-        
       },
       splitArea: {
         areaStyle: {
@@ -84,6 +83,7 @@ var option = {
       },
       data: [
         {
+          name: "分项得分",
           value: [
             props.bmi_score,
             props.bp_score,
@@ -96,7 +96,7 @@ var option = {
           ],
           areaStyle: {
             color: "#bae6fd",
-            opacity: 0.7
+            opacity: 0.7,
           },
         },
       ],
