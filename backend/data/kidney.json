@@ -1,0 +1,79 @@
+[
+    {
+        "description": "仍在抽烟,15-25支每天",
+        "relatedRisk": 1.3,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, >25支每天",
+        "relatedRisk": 2.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "父母或兄弟姐妹有肾癌",
+        "relatedRisk": 1.5,
+        "prevalence": 0.08,
+        "category": "family",
+        "bunch": 2
+    },
+    {
+        "description": "饮酒, 平均每天约半瓶啤酒(250ml)/少许白酒(<1两) [每日酒精摄入约7g]",
+        "relatedRisk": 0.8,
+        "prevalence": 0.10,
+        "category": "diet",
+        "bunch": 3
+    },
+    {
+        "description": "饮酒, 平均每天大于一瓶啤酒(500ml)/一两白酒 [每日酒精摄入≥14g]",
+        "relatedRisk": 0.7,
+        "prevalence": 0.10,
+        "category": "diet",
+        "bunch": 3
+    },
+    {
+        "description": "女性身高超过170cm, 男性身高超过178cm",
+        "relatedRisk": 1.3,
+        "prevalence": 0.22,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "高血压",
+        "relatedRisk": 2.3,
+        "prevalence": 0.734,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "子宫切除",
+        "relatedRisk": 1.3,
+        "prevalence": 0.02,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "BMI 30-34.9",
+        "relatedRisk": 1.5,
+        "prevalence": 0.05,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "BMI 35-39.9",
+        "relatedRisk": 2.0,
+        "prevalence": 0.03,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "BMI ≥40",
+        "relatedRisk": 2.75,
+        "prevalence": 0.009,
+        "category": "history",
+        "bunch": 7
+    }
+]

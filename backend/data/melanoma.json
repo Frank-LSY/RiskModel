@@ -1,0 +1,58 @@
+[
+    {
+        "description": "幼时有经常晒伤经历",
+        "relatedRisk": 3.0,
+        "prevalence": 0.22,
+        "category": "life",
+        "bunch": 1
+    },
+        {
+        "description": "第一次使用晒黑床(日光浴床)<35岁",
+        "relatedRisk": 1.9,
+        "prevalence": 0.01,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "第一次使用晒黑床(日光浴床)≥35岁",
+        "relatedRisk": 1.25,
+        "prevalence": 0.004,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "父母或兄弟姐妹有黑色素瘤",
+        "relatedRisk": 2.0,
+        "prevalence": 0.18,
+        "category": "family",
+        "bunch": 3
+    },
+    {
+        "description": "双臂上有黑痣, 1-5颗",
+        "relatedRisk": 1.4,
+        "prevalence": 0.31,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "双臂上有黑痣, 6-10颗",
+        "relatedRisk": 2.5,
+        "prevalence": 0.42,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "双臂上有黑痣, ≥11颗",
+        "relatedRisk": 4.8,
+        "prevalence": 0.26,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "免疫抑制药物史",
+        "relatedRisk": 2.0,
+        "prevalence": 0.09,
+        "category": "medicine",
+        "bunch": 5
+    }
+]

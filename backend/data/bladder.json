@@ -1,0 +1,44 @@
+[
+    {
+        "description": "仍在抽烟, <15支每天",
+        "relatedRisk": 1.3,
+        "prevalence": 0.25,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, 15-25支每天",
+        "relatedRisk": 2.3,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, >25支每天",
+        "relatedRisk": 3.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "无保护工作暴露，橡胶/铝/芳香族, 5-20年",
+        "relatedRisk": 2.5,
+        "prevalence": 0.01,
+        "category": "work",
+        "bunch": 2
+    },
+    {
+        "description": "无保护工作暴露，橡胶/铝/芳香族, ≥20年",
+        "relatedRisk": 5.0,
+        "prevalence": 0.003,
+        "category": "work",
+        "bunch": 2
+    },
+    {
+        "description": "父母或兄弟姐妹患有膀胱癌",
+        "relatedRisk": 1.5,
+        "prevalence": 0.016,
+        "category": "family",
+        "bunch": 3
+    }
+]

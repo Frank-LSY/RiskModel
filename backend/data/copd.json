@@ -1,0 +1,114 @@
+[
+    {
+        "description": "仍在抽烟, <15支每天",
+        "relatedRisk": 2.0,
+        "prevalence": 0.25,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, 15-25支每天",
+        "relatedRisk": 5.0,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "仍在抽烟, >25支每天",
+        "relatedRisk": 10.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟<2年, 抽烟时<15支每天",
+        "relatedRisk": 2.0,
+        "prevalence": 0.25,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟<2年, 抽烟时15-25支每天",
+        "relatedRisk": 5.0,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟<2年, 抽烟时>25支每天",
+        "relatedRisk": 10.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟2-10年, 抽烟时<15支每天",
+        "relatedRisk": 1.7,
+        "prevalence": 0.25,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟2-10年, 抽烟时15-25支每天",
+        "relatedRisk": 4.0,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟2-10年, 抽烟时>25支每天",
+        "relatedRisk": 8.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟>10年, 抽烟时<15支每天",
+        "relatedRisk": 1.5,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟>10年, 抽烟时15-25支每天",
+        "relatedRisk": 2.5,
+        "prevalence": 0.15,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "戒烟>10年, 抽烟时>25支每天",
+        "relatedRisk": 5.0,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "在城市里生活, ≥10年",
+        "relatedRisk": 1.2,
+        "prevalence": 0.58,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "无保护工作暴露, 铬/金粉/煤粉/其他矿物粉尘/焊接烟尘, >20年",
+        "relatedRisk": 1.2,
+        "prevalence": 0.008,
+        "category": "work",
+        "bunch": 3
+    },
+    {
+        "description": "平均每天摄入至少8两(400g)蔬菜/水果",
+        "relatedRisk": 0.8,
+        "prevalence": 0.62,
+        "category": "diet",
+        "bunch": 4
+    },
+    {
+        "description": "α-1 抗胰蛋白酶缺乏症",
+        "relatedRisk": 10.0,
+        "prevalence": 0.02,
+        "category": "diet",
+        "bunch": 5
+    }
+]

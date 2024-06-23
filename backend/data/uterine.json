@@ -1,0 +1,107 @@
+[
+    {
+        "description": "仍在抽烟, ≥25支每天",
+        "relatedRisk": 0.7,
+        "prevalence": 0.08,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "体育锻炼, 至少每天30分钟 或 每周3小时",
+        "relatedRisk": 0.8,
+        "prevalence": 0.42,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "母亲或姐妹有子宫癌",
+        "relatedRisk": 1.5,
+        "prevalence": 0.12,
+        "category": "family",
+        "bunch": 3
+    },
+    {
+        "description": "咖啡, 每天 ≥ 2杯(500ml)",
+        "relatedRisk": 1.5,
+        "prevalence": 0.22,
+        "category": "diet",
+        "bunch": 4
+    },
+    {
+        "description": "BMI 25-29.9",
+        "relatedRisk": 1.6,
+        "prevalence": 0.25,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "BMI 30-34.9",
+        "relatedRisk": 2.5,
+        "prevalence": 0.05,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "BMI 35-39.9",
+        "relatedRisk": 4.0,
+        "prevalence": 0.03,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "BMI ≥40",
+        "relatedRisk": 6.5,
+        "prevalence": 0.009,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "未生育",
+        "relatedRisk": 1.2,
+        "prevalence": 0.19,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "绝经年龄≥55岁",
+        "relatedRisk": 1.9,
+        "prevalence": 0.54,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "糖尿病/高血糖症",
+        "relatedRisk": 1.5,
+        "prevalence": 0.17,
+        "category": "history",
+        "bunch": 8
+    },
+    {
+        "description": "口服避孕药, ≥5年",
+        "relatedRisk": 0.5,
+        "prevalence": 0.17,
+        "category": "medicine",
+        "bunch": 9
+    },
+    {
+        "description": "雌激素使用, ≥10年",
+        "relatedRisk": 1.4,
+        "prevalence": 0.04,
+        "category": "medicine",
+        "bunch": 10
+    },
+    {
+        "description": "他莫昔芬/拉罗昔芬 用药, 2-5年",
+        "relatedRisk": 2.0,
+        "prevalence": 0.017,
+        "category": "medicine",
+        "bunch": 18
+    },
+    {
+        "description": "他莫昔芬 用药, ≥5年",
+        "relatedRisk": 3.3,
+        "prevalence": 0.017,
+        "category": "medicine",
+        "bunch": 11
+    }
+]

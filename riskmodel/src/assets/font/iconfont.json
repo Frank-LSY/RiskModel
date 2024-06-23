@@ -1,0 +1,86 @@
+{
+  "id": "4444754",
+  "name": "ydr",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "your disease risk",
+  "glyphs": [
+    {
+      "icon_id": "1972953",
+      "name": "体重",
+      "font_class": "tizhong",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "1108",
+      "name": "错误",
+      "font_class": "cuowu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1115093",
+      "name": "正确",
+      "font_class": "zhengque",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "38135611",
+      "name": "血压计-F",
+      "font_class": "xieyaji-F",
+      "unicode": "e9e3",
+      "unicode_decimal": 59875
+    },
+    {
+      "icon_id": "171149",
+      "name": "体重_1",
+      "font_class": "weight",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "9218885",
+      "name": "饮食",
+      "font_class": "meal",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "14076184",
+      "name": "锻炼3",
+      "font_class": "exercise",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "14388723",
+      "name": "高血脂症",
+      "font_class": "fat",
+      "unicode": "e6ef",
+      "unicode_decimal": 59119
+    },
+    {
+      "icon_id": "18166813",
+      "name": "床,休息,睡觉,睡眠",
+      "font_class": "sleep",
+      "unicode": "e8e7",
+      "unicode_decimal": 59623
+    },
+    {
+      "icon_id": "18666401",
+      "name": "禁止吸烟",
+      "font_class": "smoke",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "38412814",
+      "name": "血糖仪",
+      "font_class": "sugar",
+      "unicode": "e737",
+      "unicode_decimal": 59191
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+[
+    {
+        "description": "仍在抽烟",
+        "relatedRisk": 2.3,
+        "prevalence": 0.22,
+        "category": "life",
+        "bunch": 1
+    },
+    {
+        "description": "首次性生活早于16岁",
+        "relatedRisk": 1.5,
+        "prevalence": 0.22,
+        "category": "life",
+        "bunch": 2
+    },
+    {
+        "description": "男性性伴侣, 2-5个",
+        "relatedRisk": 2.0,
+        "prevalence": 0.32,
+        "category": "life",
+        "bunch": 3
+    },
+    {
+        "description": "男性性伴侣, ≥6个",
+        "relatedRisk": 3.0,
+        "prevalence": 0.12,
+        "category": "life",
+        "bunch": 3
+    },
+    {
+        "description": "生育1个或2个孩子",
+        "relatedRisk": 1.3,
+        "prevalence": 0.42,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "生育超过3个孩子",
+        "relatedRisk": 2.3,
+        "prevalence": 0.22,
+        "category": "history",
+        "bunch": 4
+    },
+    {
+        "description": "过去3-5年内做过巴氏涂片或HPV检查",
+        "relatedRisk": 0.5,
+        "prevalence": 0.24,
+        "category": "history",
+        "bunch": 5
+    },
+    {
+        "description": "患有一种或多种性传播疾病(淋病、梅毒、疣等)",
+        "relatedRisk": 2.0,
+        "prevalence": 0.04,
+        "category": "history",
+        "bunch": 6
+    },
+    {
+        "description": "HPV检查阳性",
+        "relatedRisk": 16.0,
+        "prevalence": 0.291,
+        "category": "history",
+        "bunch": 7
+    },
+    {
+        "description": "HPV 疫苗注射",
+        "relatedRisk": 0.25,
+        "prevalence": 0.21,
+        "category": "medicine",
+        "bunch": 8
+    }
+]
